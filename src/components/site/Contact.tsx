@@ -43,6 +43,7 @@ export function Contact() {
               <div>
                 <div className="text-xs uppercase tracking-widest text-muted-foreground">Call the studio</div>
                 <div className="font-serif text-2xl text-foreground">(956) 313-1847</div>
+                <div className="text-sm text-muted-foreground">or (956) 682-2119</div>
               </div>
             </a>
 
@@ -50,15 +51,46 @@ export function Contact() {
               <div className="rounded-2xl border border-border/70 bg-card p-5">
                 <Clock className="h-5 w-5 text-primary" />
                 <div className="mt-3 text-xs uppercase tracking-widest text-muted-foreground">Hours</div>
-                <div className="mt-1 text-sm text-foreground">Mon&ndash;Sat &middot; 9am&ndash;6pm</div>
-                <div className="text-sm text-muted-foreground">Sun &middot; By appointment</div>
+                <div className="mt-1 space-y-0.5 text-sm">
+                  <div className="text-foreground">Mon&ndash;Fri &middot; 9am&ndash;6pm</div>
+                  <div className="text-foreground">Sat &middot; 9am&ndash;3pm</div>
+                  <div className="text-muted-foreground">Sun &middot; 9am&ndash;5pm</div>
+                </div>
               </div>
               <div className="rounded-2xl border border-border/70 bg-card p-5">
                 <MapPin className="h-5 w-5 text-primary" />
                 <div className="mt-3 text-xs uppercase tracking-widest text-muted-foreground">Delivery</div>
-                <div className="mt-1 text-sm text-foreground">Rio Grande Valley</div>
-                <div className="text-sm text-muted-foreground">& surrounding areas</div>
+                <div className="mt-1 text-sm text-foreground">Pharr, McAllen, Mission,</div>
+                <div className="text-sm text-foreground">Weslaco &amp; the RGV</div>
+                <div className="mt-1 text-xs text-muted-foreground">Same-day before 3pm CST</div>
               </div>
+            </div>
+
+            <div className="grid grid-cols-1 gap-2 text-sm sm:grid-cols-3">
+              <a
+                href="https://www.valleygirlflorist.com/flower-care-tips/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-xl border border-border/60 bg-card px-4 py-3 text-center text-foreground/80 transition-colors hover:border-primary/40 hover:text-primary"
+              >
+                Flower Care Tips
+              </a>
+              <a
+                href="https://www.valleygirlflorist.com/local-funeral-homes/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-xl border border-border/60 bg-card px-4 py-3 text-center text-foreground/80 transition-colors hover:border-primary/40 hover:text-primary"
+              >
+                Funeral Deliveries
+              </a>
+              <a
+                href="https://www.valleygirlflorist.com/local-hospitals/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-xl border border-border/60 bg-card px-4 py-3 text-center text-foreground/80 transition-colors hover:border-primary/40 hover:text-primary"
+              >
+                Hospital Deliveries
+              </a>
             </div>
 
             <div className="flex items-center gap-3">

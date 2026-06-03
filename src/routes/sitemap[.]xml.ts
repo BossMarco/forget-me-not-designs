@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
+import { CATEGORIES } from "@/data/products";
 
 const BASE_URL = "https://forget-me-not-designs.lovable.app";
 
@@ -15,6 +16,12 @@ export const Route = createFileRoute("/sitemap.xml")({
       GET: async () => {
         const entries: SitemapEntry[] = [
           { path: "/", changefreq: "weekly", priority: "1.0" },
+          { path: "/shop", changefreq: "weekly", priority: "0.9" },
+          ...CATEGORIES.map((c) => ({
+            path: `/shop/${c.slug}`,
+            changefreq: "weekly" as const,
+            priority: "0.8",
+          })),
         ];
 
         const urls = entries.map((e) =>
