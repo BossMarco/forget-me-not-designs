@@ -1,7 +1,19 @@
 # Forget Me Not Flowers & Gifts
 
-> Premium local florist by Mariela serving the Rio Grande Valley — hand-arranged bouquets, weddings, events, and curated gift baskets.
+> Premium local florist by Mariela serving Pharr, McAllen, Mission, Weslaco and the Rio Grande Valley — hand-arranged bouquets, weddings, events, and curated gift baskets. Order online at valleygirlflorist.com or call (956) 313-1847.
 
 ## Pages
 
-- [Home](/): Studio overview, services, gallery, and contact info. Phone (956) 313-1847.
+- [Home](/): Studio overview, services, featured arrangements, gallery, contact.
+- [Shop](/shop): Browse all arrangements by occasion.
+- [Birthday](/shop/birthday)
+- [Anniversary](/shop/anniversary)
+- [Romance](/shop/romance)
+- [Get Well](/shop/get-well)
+- [Just Because](/shop/just-because)
+- [Thank You](/shop/thank-you)
+- [Everyday](/shop/everyday)
+- [New Baby](/shop/baby)
+- [Congratulations](/shop/congratulations)
+- [Friendship](/shop/friendship)
+- [Sympathy](/shop/sympathy)
