@@ -1,45 +1,54 @@
-# Forget Me Not Flowers & Gifts — Website Plan
+## Plan: Import content from valleygirlflorist.com
 
-A romantic, editorial-feeling florist site. Watercolor-inspired palette (lavender, sage, cream), serif display typography paired with a clean sans, and generous whitespace so the floral photography carries the visual weight.
+### 1. Scrape source content (build-time, one pass)
 
-Note: the referenced branding image was not attached to this chat. I'll work from your color/typography description (elegant purples, soft lavenders, sage greens, cream). If you re-upload the logo, I'll swap it in for the placeholder mark.
+Use Firecrawl (via the lovable connector) to crawl the existing site:
+- Homepage + each category page under `/store/occasion/*` and `/store/sympathy/*` (Birthday, Sympathy, Get Well, Anniversary, Just Because, Weddings, etc.)
+- Info pages: `/flower-care-tips/`, `/local-funeral-homes/`, `/local-hospitals/`, About / Contact
 
-## Design direction
+Extract for each product: name, price, original URL, image URL, category. Save to `src/data/products.ts` (typed array, ~50–150 items). No DB needed.
 
-- **Palette (oklch tokens in `src/styles.css`)**
-  - Background: warm cream `oklch(0.985 0.008 85)`
-  - Foreground/ink: deep aubergine `oklch(0.28 0.05 305)`
-  - Primary: lavender-purple `oklch(0.62 0.13 300)`
-  - Accent: sage `oklch(0.72 0.06 150)`
-  - Muted: soft lilac `oklch(0.95 0.02 305)`
-- **Typography:** Cormorant Garamond (display serif) + Inter (body), loaded via Google Fonts.
-- **Motion:** Subtle fade/slide-in on scroll, gentle image hover zoom, smooth-scroll anchor links. Implemented with Framer Motion + CSS.
-- **Imagery:** Generate 4–6 hero/gallery florals via the image tool (lavender bouquets, romantic wedding arrangements, gift baskets) saved under `src/assets/`.
+If Firecrawl connector isn't linked, I'll request it before starting.
 
-## Site structure (single landing route)
+### 2. Featured Arrangements section on home
 
-`src/routes/index.tsx` composed of section components in `src/components/site/`:
+New `src/components/site/Featured.tsx` between Services and Gallery:
+- Carousel/grid of 8 hand-picked products (mix of Birthday + popular)
+- Each card: image, name, price, "View on Store →" linking out to the original `valleygirlflorist.com` product URL (new tab, `rel="noopener"`)
+- Sourced from `products.ts`
 
-1. **Navbar** — sticky, translucent on scroll, logo wordmark, nav links (Home, About, Services, Gallery, Contact), prominent `Call Now` button linking to `tel:+19563131847`.
-2. **Hero** — full-width hero image, headline "Elegantly Crafted Florals for Life's Special Moments", subhead, CTA "Send a Message" that smooth-scrolls to `#contact`, secondary "Call (956) 313-1847".
-3. **About** — two-column: portrait/floral image + Mariela's intro and mission statement.
-4. **Services** — 3 cards: Everyday Arrangements, Weddings & Events, Curated Gift Baskets. Icon + short description + soft hover lift.
-5. **Gallery** — responsive masonry/grid of 8–10 floral images with hover zoom; subtle "700+ arrangements crafted" stat strip.
-6. **Contact** — left: phone (large), hours, address/delivery zones, social placeholders. Right: inquiry form (name, email, phone, event date, message) using shadcn `Input`/`Textarea`/`Button` with toast feedback (no backend — submission shows a confirmation toast; ready to wire to Lovable Cloud later if desired).
-7. **Footer** — wordmark, quick links, copyright.
+### 3. Replace Gallery with real product photos
 
-## Technical notes
+Swap placeholder generated images in `Gallery.tsx` for 8–10 actual product photos pulled from the scrape. Images uploaded via `lovable-assets` CLI so they're CDN-hosted, not bundled. Alt text = product name.
 
-- TanStack Start single route at `/` with proper `head()` SEO (title, description, OG tags).
-- New components under `src/components/site/{Navbar,Hero,About,Services,Gallery,Contact,Footer}.tsx`.
-- Design tokens added to `src/styles.css` `@theme inline` + `:root` (purple/sage/cream). Google Fonts imported at top of `styles.css`.
-- Smooth scroll via `html { scroll-behavior: smooth }` and anchor IDs on sections.
-- Fully responsive (mobile nav becomes a Sheet drawer).
-- Generated florals stored in `src/assets/` and referenced via ES imports.
-- No backend in this pass; the form is client-only with a success toast.
+### 4. Catalog routes (browsable categories)
 
-## Out of scope (ask if you want these)
+New routes:
+- `src/routes/shop.tsx` — index of all categories, grid of category tiles
+- `src/routes/shop.$category.tsx` — dynamic route rendering all products in that category, filtered from `products.ts`
 
-- Real form delivery (email/SMS) — needs Lovable Cloud + an email provider.
-- CMS for the gallery — currently static images.
-- Online ordering/checkout.
+Each product card links out to BloomNet. Add Shop to navbar + footer. Each route gets its own `head()` with unique title/description/og.
+
+### 5. Business info update
+
+From the source site, pull and surface in `Contact.tsx` + `Footer.tsx`:
+- Real phone/address/hours (if visible on source)
+- Links to existing resource pages (Flower Care Tips, Funeral Homes, Hospital Delivery) — open in new tab to old site, since rebuilding them isn't in scope
+
+### 6. SEO housekeeping
+
+- Update `src/routes/sitemap[.]xml.ts` `entries` to include `/shop` and one entry per category
+- Update `public/llms.txt` with the new page list
+
+### Technical notes
+
+- All "Buy Now" CTAs are `<a href target="_blank" rel="noopener noreferrer">` to the original product page on valleygirlflorist.com — no cart/checkout built in this app.
+- Products are a static TS file generated once from the scrape; re-running the scrape later refreshes it. No backend, no Lovable Cloud needed for this pass.
+- Product images served from Lovable Assets CDN (uploaded via `lovable-assets create`) so the repo stays light.
+- Firecrawl connector is a one-time build-time tool here; the published site has no runtime dependency on it.
+
+### Out of scope (call out explicitly)
+
+- Real online ordering / cart / payments (would require Shopify or rebuilding BloomNet integration)
+- Live inventory sync (products.ts is a snapshot)
+- Rebuilding Flower Care / Funeral Home / Hospital pages — we link out instead
