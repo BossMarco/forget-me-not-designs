@@ -64,6 +64,7 @@ function Index() {
         <Hero />
         <About />
         <Services />
+        <Featured />
         <Gallery />
         <Contact />
       </main>
