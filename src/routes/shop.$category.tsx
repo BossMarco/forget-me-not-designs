@@ -2,12 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, ArrowUpRight, Phone } from "lucide-react";
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
-import {
-  CATEGORIES,
-  PRODUCTS,
-  getCategory,
-  type CategorySlug,
-} from "@/data/products";
+import { CATEGORIES, PRODUCTS, getCategory, type CategorySlug } from "@/data/products";
 
 const SITE_URL = "https://forget-me-not-designs.lovable.app";
 
@@ -63,9 +58,7 @@ function CategoryNotFound() {
       <Navbar />
       <main className="mx-auto max-w-2xl px-6 pt-40 pb-24 text-center">
         <h1 className="font-serif text-4xl text-foreground">Category not found</h1>
-        <p className="mt-4 text-muted-foreground">
-          We couldn&rsquo;t find that collection.
-        </p>
+        <p className="mt-4 text-muted-foreground">We couldn&rsquo;t find that collection.</p>
         <Link
           to="/shop"
           className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 text-primary-foreground hover:opacity-90"
@@ -80,9 +73,7 @@ function CategoryNotFound() {
 
 function CategoryPage() {
   const { category } = Route.useLoaderData();
-  const products = PRODUCTS.filter((p) =>
-    p.categories.includes(category.slug as CategorySlug),
-  );
+  const products = PRODUCTS.filter((p) => p.categories.includes(category.slug as CategorySlug));
 
   return (
     <div className="min-h-screen bg-background">
@@ -101,9 +92,7 @@ function CategoryPage() {
               <p className="mb-3 text-xs uppercase tracking-[0.3em] text-primary">
                 {products.length} arrangements
               </p>
-              <h1 className="font-serif text-4xl text-foreground sm:text-5xl">
-                {category.label}
-              </h1>
+              <h1 className="font-serif text-4xl text-foreground sm:text-5xl">{category.label}</h1>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
                 {category.blurb}
               </p>

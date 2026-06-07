@@ -28,9 +28,7 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "website" },
       { property: "og:url", content: SITE_URL + "/" },
     ],
-    links: [
-      { rel: "canonical", href: SITE_URL + "/" },
-    ],
+    links: [{ rel: "canonical", href: SITE_URL + "/" }],
     scripts: [
       {
         type: "application/ld+json",

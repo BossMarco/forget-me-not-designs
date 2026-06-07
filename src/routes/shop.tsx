@@ -36,12 +36,10 @@ function ShopIndex() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-2xl text-center">
             <p className="mb-4 text-xs uppercase tracking-[0.3em] text-primary">The Shop</p>
-            <h1 className="font-serif text-4xl text-foreground sm:text-5xl">
-              Browse by occasion
-            </h1>
+            <h1 className="font-serif text-4xl text-foreground sm:text-5xl">Browse by occasion</h1>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Every piece is hand-arranged in our Pharr, TX studio. To order, tap any
-              arrangement to continue on our store &mdash; or call us directly.
+              Every piece is hand-arranged in our Pharr, TX studio. To order, tap any arrangement to
+              continue on our store &mdash; or call us directly.
             </p>
             <a
               href="tel:+19563131847"

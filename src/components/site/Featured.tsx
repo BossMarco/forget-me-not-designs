@@ -14,9 +14,9 @@ const FEATURED_SLUGS = [
   "daisy-delights-fruit-bouquet",
 ];
 
-const items = FEATURED_SLUGS
-  .map((s) => PRODUCTS.find((p) => p.slug === s))
-  .filter((p): p is NonNullable<typeof p> => Boolean(p));
+const items = FEATURED_SLUGS.map((s) => PRODUCTS.find((p) => p.slug === s)).filter(
+  (p): p is NonNullable<typeof p> => Boolean(p),
+);
 
 export function Featured() {
   return (

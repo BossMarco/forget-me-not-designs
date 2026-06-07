@@ -8,6 +8,7 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -78,17 +79,37 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Forget Me Not Flowers & Gifts" },
-      { name: "description", content: "Premium local florist by Mariela — hand-arranged bouquets, weddings, events, and curated gift baskets in the Rio Grande Valley." },
+      {
+        name: "description",
+        content:
+          "Premium local florist by Mariela — hand-arranged bouquets, weddings, events, and curated gift baskets in the Rio Grande Valley.",
+      },
       { name: "author", content: "Forget Me Not Flowers & Gifts" },
       { property: "og:title", content: "Forget Me Not Flowers & Gifts" },
-      { property: "og:description", content: "Premium local florist by Mariela — hand-arranged bouquets, weddings, events, and curated gift baskets in the Rio Grande Valley." },
+      {
+        property: "og:description",
+        content:
+          "Premium local florist by Mariela — hand-arranged bouquets, weddings, events, and curated gift baskets in the Rio Grande Valley.",
+      },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Forget Me Not Flowers & Gifts" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Forget Me Not Flowers & Gifts" },
-      { name: "twitter:description", content: "Premium local florist by Mariela — hand-arranged bouquets, weddings, events, and curated gift baskets in the Rio Grande Valley." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/92661d75-0521-4840-9a1e-c165fb0e953c/id-preview-0fadca38--3879e339-6209-40d7-988b-a4163235fb1c.lovable.app-1780502167681.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/92661d75-0521-4840-9a1e-c165fb0e953c/id-preview-0fadca38--3879e339-6209-40d7-988b-a4163235fb1c.lovable.app-1780502167681.png" },
+      {
+        name: "twitter:description",
+        content:
+          "Premium local florist by Mariela — hand-arranged bouquets, weddings, events, and curated gift baskets in the Rio Grande Valley.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/92661d75-0521-4840-9a1e-c165fb0e953c/id-preview-0fadca38--3879e339-6209-40d7-988b-a4163235fb1c.lovable.app-1780502167681.png",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/92661d75-0521-4840-9a1e-c165fb0e953c/id-preview-0fadca38--3879e339-6209-40d7-988b-a4163235fb1c.lovable.app-1780502167681.png",
+      },
     ],
     links: [
       {
@@ -112,6 +133,7 @@ function RootShell({ children }: { children: ReactNode }) {
       <body>
         {children}
         <Scripts />
+        <Analytics />
       </body>
     </html>
   );
