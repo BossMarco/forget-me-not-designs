@@ -36,7 +36,9 @@ export function Navbar() {
           </span>
           <div className="leading-tight">
             <div className="font-serif text-lg md:text-xl text-foreground">Forget Me Not</div>
-            <div className="text-[10px] tracking-[0.25em] uppercase text-muted-foreground">Flowers &amp; Gifts</div>
+            <div className="text-[10px] tracking-[0.25em] uppercase text-muted-foreground">
+              Flowers &amp; Gifts
+            </div>
           </div>
         </a>
 
@@ -69,7 +71,11 @@ export function Navbar() {
               <SheetTitle className="font-serif text-2xl">Menu</SheetTitle>
               <nav className="mt-8 flex flex-col gap-5">
                 {links.map((l) => (
-                  <a key={l.href} href={l.href} className="text-lg text-foreground/85 hover:text-primary">
+                  <a
+                    key={l.href}
+                    href={l.href}
+                    className="text-lg text-foreground/85 hover:text-primary"
+                  >
                     {l.label}
                   </a>
                 ))}

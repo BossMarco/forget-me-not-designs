@@ -3,6 +3,7 @@
 ### 1. Scrape source content (build-time, one pass)
 
 Use Firecrawl (via the lovable connector) to crawl the existing site:
+
 - Homepage + each category page under `/store/occasion/*` and `/store/sympathy/*` (Birthday, Sympathy, Get Well, Anniversary, Just Because, Weddings, etc.)
 - Info pages: `/flower-care-tips/`, `/local-funeral-homes/`, `/local-hospitals/`, About / Contact
 
@@ -13,6 +14,7 @@ If Firecrawl connector isn't linked, I'll request it before starting.
 ### 2. Featured Arrangements section on home
 
 New `src/components/site/Featured.tsx` between Services and Gallery:
+
 - Carousel/grid of 8 hand-picked products (mix of Birthday + popular)
 - Each card: image, name, price, "View on Store →" linking out to the original `valleygirlflorist.com` product URL (new tab, `rel="noopener"`)
 - Sourced from `products.ts`
@@ -24,6 +26,7 @@ Swap placeholder generated images in `Gallery.tsx` for 8–10 actual product pho
 ### 4. Catalog routes (browsable categories)
 
 New routes:
+
 - `src/routes/shop.tsx` — index of all categories, grid of category tiles
 - `src/routes/shop.$category.tsx` — dynamic route rendering all products in that category, filtered from `products.ts`
 
@@ -32,6 +35,7 @@ Each product card links out to BloomNet. Add Shop to navbar + footer. Each route
 ### 5. Business info update
 
 From the source site, pull and surface in `Contact.tsx` + `Footer.tsx`:
+
 - Real phone/address/hours (if visible on source)
 - Links to existing resource pages (Flower Care Tips, Funeral Homes, Hospital Delivery) — open in new tab to old site, since rebuilding them isn't in scope
 
