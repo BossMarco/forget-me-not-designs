@@ -16,6 +16,7 @@ import { Route as SitemapCoreDotxmlRouteImport } from './routes/sitemap-core[.]x
 import { Route as SitemapCitiesDotxmlRouteImport } from './routes/sitemap-cities[.]xml'
 import { Route as ShopRouteImport } from './routes/shop'
 import { Route as LlmsDottxtRouteImport } from './routes/llms[.]txt'
+import { Route as LlmsFullDottxtRouteImport } from './routes/llms-full[.]txt'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ShopIndexRouteImport } from './routes/shop.index'
 import { Route as OccasionsIndexRouteImport } from './routes/occasions.index'
@@ -60,6 +61,11 @@ const ShopRoute = ShopRouteImport.update({
 const LlmsDottxtRoute = LlmsDottxtRouteImport.update({
   id: '/llms.txt',
   path: '/llms.txt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LlmsFullDottxtRoute = LlmsFullDottxtRouteImport.update({
+  id: '/llms-full.txt',
+  path: '/llms-full.txt',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -116,6 +122,7 @@ const FlowerDeliveryCityOccasionRoute =
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/llms-full.txt': typeof LlmsFullDottxtRoute
   '/llms.txt': typeof LlmsDottxtRoute
   '/shop': typeof ShopRouteWithChildren
   '/sitemap-cities.xml': typeof SitemapCitiesDotxmlRoute
@@ -135,6 +142,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/llms-full.txt': typeof LlmsFullDottxtRoute
   '/llms.txt': typeof LlmsDottxtRoute
   '/sitemap-cities.xml': typeof SitemapCitiesDotxmlRoute
   '/sitemap-core.xml': typeof SitemapCoreDotxmlRoute
@@ -153,6 +161,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/llms-full.txt': typeof LlmsFullDottxtRoute
   '/llms.txt': typeof LlmsDottxtRoute
   '/shop': typeof ShopRouteWithChildren
   '/sitemap-cities.xml': typeof SitemapCitiesDotxmlRoute
@@ -174,6 +183,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/llms-full.txt'
     | '/llms.txt'
     | '/shop'
     | '/sitemap-cities.xml'
@@ -193,6 +203,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/llms-full.txt'
     | '/llms.txt'
     | '/sitemap-cities.xml'
     | '/sitemap-core.xml'
@@ -210,6 +221,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/llms-full.txt'
     | '/llms.txt'
     | '/shop'
     | '/sitemap-cities.xml'
@@ -230,6 +242,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  LlmsFullDottxtRoute: typeof LlmsFullDottxtRoute
   LlmsDottxtRoute: typeof LlmsDottxtRoute
   ShopRoute: typeof ShopRouteWithChildren
   SitemapCitiesDotxmlRoute: typeof SitemapCitiesDotxmlRoute
@@ -293,6 +306,13 @@ declare module '@tanstack/react-router' {
       path: '/llms.txt'
       fullPath: '/llms.txt'
       preLoaderRoute: typeof LlmsDottxtRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/llms-full.txt': {
+      id: '/llms-full.txt'
+      path: '/llms-full.txt'
+      fullPath: '/llms-full.txt'
+      preLoaderRoute: typeof LlmsFullDottxtRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -395,6 +415,7 @@ const FlowerDeliveryCityRouteWithChildren =
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  LlmsFullDottxtRoute: LlmsFullDottxtRoute,
   LlmsDottxtRoute: LlmsDottxtRoute,
   ShopRoute: ShopRouteWithChildren,
   SitemapCitiesDotxmlRoute: SitemapCitiesDotxmlRoute,

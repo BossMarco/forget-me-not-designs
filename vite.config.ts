@@ -7,6 +7,13 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
+  // Bake the build date in as a literal so sitemap <lastmod> reflects the real
+  // last-deploy date (stable until the next build), not the request time.
+  vite: {
+    define: {
+      __BUILD_DATE__: JSON.stringify(new Date().toISOString().slice(0, 10)),
+    },
+  },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
@@ -48,6 +55,9 @@ export default defineConfig({
               headers: { "content-type": "application/xml; charset=utf-8" },
             },
             "/llms.txt": {
+              headers: { "content-type": "text/plain; charset=utf-8" },
+            },
+            "/llms-full.txt": {
               headers: { "content-type": "text/plain; charset=utf-8" },
             },
           },

@@ -42,11 +42,20 @@ const XML_HEADERS = {
   "Cache-Control": "public, max-age=3600",
 };
 
+// Build date injected via Vite define (vite.config.ts). The typeof guard keeps it
+// safe if the define is ever absent — falls back to the current date.
+declare const __BUILD_DATE__: string | undefined;
+const LASTMOD =
+  typeof __BUILD_DATE__ !== "undefined" && __BUILD_DATE__
+    ? __BUILD_DATE__
+    : new Date().toISOString().slice(0, 10);
+
 export function urlsetResponse(entries: SitemapEntry[]): Response {
   const urls = entries.map((e) =>
     [
       `  <url>`,
       `    <loc>${SITE_URL}${e.path}</loc>`,
+      `    <lastmod>${LASTMOD}</lastmod>`,
       e.changefreq ? `    <changefreq>${e.changefreq}</changefreq>` : null,
       e.priority ? `    <priority>${e.priority}</priority>` : null,
       `  </url>`,
@@ -65,7 +74,12 @@ export function urlsetResponse(entries: SitemapEntry[]): Response {
 
 export function sitemapIndexResponse(paths: string[]): Response {
   const maps = paths.map((p) =>
-    [`  <sitemap>`, `    <loc>${SITE_URL}${p}</loc>`, `  </sitemap>`].join("\n"),
+    [
+      `  <sitemap>`,
+      `    <loc>${SITE_URL}${p}</loc>`,
+      `    <lastmod>${LASTMOD}</lastmod>`,
+      `  </sitemap>`,
+    ].join("\n"),
   );
   const xml = [
     `<?xml version="1.0" encoding="UTF-8"?>`,
