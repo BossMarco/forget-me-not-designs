@@ -1,4 +1,54 @@
+# Forget Me Not Flowers & Gifts — all crawlers, including AI/LLM bots, are welcome
+# to read and use our content.
+
 User-agent: *
 Allow: /
 
+# AI / LLM crawlers — explicitly allowed (search, answer engines, and training).
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Page directory for LLMs: https://www.forgetmenotrgv.com/llms.txt
 Sitemap: https://www.forgetmenotrgv.com/sitemap.xml
