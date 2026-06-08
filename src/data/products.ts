@@ -30,17 +30,57 @@ export interface Category {
 }
 
 export const CATEGORIES: Category[] = [
-  { slug: "birthday", label: "Birthday", blurb: "Bright, joyful arrangements to make their day unforgettable." },
-  { slug: "anniversary", label: "Anniversary", blurb: "Romantic florals to mark another year together." },
-  { slug: "get-well", label: "Get Well", blurb: "Cheerful blooms and plants to lift their spirits." },
-  { slug: "just-because", label: "Just Because", blurb: "Surprise the people you love, no occasion required." },
-  { slug: "romance", label: "Romance", blurb: "Lush roses and elegant bouquets for the moments that matter." },
+  {
+    slug: "birthday",
+    label: "Birthday",
+    blurb: "Bright, joyful arrangements to make their day unforgettable.",
+  },
+  {
+    slug: "anniversary",
+    label: "Anniversary",
+    blurb: "Romantic florals to mark another year together.",
+  },
+  {
+    slug: "get-well",
+    label: "Get Well",
+    blurb: "Cheerful blooms and plants to lift their spirits.",
+  },
+  {
+    slug: "just-because",
+    label: "Just Because",
+    blurb: "Surprise the people you love, no occasion required.",
+  },
+  {
+    slug: "romance",
+    label: "Romance",
+    blurb: "Lush roses and elegant bouquets for the moments that matter.",
+  },
   { slug: "thank-you", label: "Thank You", blurb: "A graceful way to say what words can't." },
-  { slug: "everyday", label: "Everyday", blurb: "Fresh, everyday designs hand-arranged in studio." },
-  { slug: "baby", label: "New Baby", blurb: "Soft, sweet arrangements to welcome the newest arrival." },
-  { slug: "congratulations", label: "Congratulations", blurb: "Celebrate milestones with vibrant, festive florals." },
-  { slug: "friendship", label: "Friendship", blurb: "Warm, cheerful bouquets for the people who get you." },
-  { slug: "sympathy", label: "Sympathy", blurb: "Timeless, comforting designs to honor those we've lost." },
+  {
+    slug: "everyday",
+    label: "Everyday",
+    blurb: "Fresh, everyday designs hand-arranged in studio.",
+  },
+  {
+    slug: "baby",
+    label: "New Baby",
+    blurb: "Soft, sweet arrangements to welcome the newest arrival.",
+  },
+  {
+    slug: "congratulations",
+    label: "Congratulations",
+    blurb: "Celebrate milestones with vibrant, festive florals.",
+  },
+  {
+    slug: "friendship",
+    label: "Friendship",
+    blurb: "Warm, cheerful bouquets for the people who get you.",
+  },
+  {
+    slug: "sympathy",
+    label: "Sympathy",
+    blurb: "Timeless, comforting designs to honor those we've lost.",
+  },
 ];
 
 export const PRODUCTS: Product[] = [
@@ -80,9 +120,18 @@ export const PRODUCTS: Product[] = [
     slug: "daisy-delights-fruit-bouquet",
     name: "Daisy Delights Fruit Bouquet",
     price: "$64.99",
-    image: "https://www.valleygirlflorist.com/assets/2042/14/DimFeatured/daisy_delights_7fb615_(1).jpg?284760",
+    image:
+      "https://www.valleygirlflorist.com/assets/2042/14/DimFeatured/daisy_delights_7fb615_(1).jpg?284760",
     url: "https://www.valleygirlflorist.com/daisy-delights-fruit-bouquet/",
-    categories: ["birthday", "get-well", "just-because", "thank-you", "everyday", "congratulations", "friendship"],
+    categories: [
+      "birthday",
+      "get-well",
+      "just-because",
+      "thank-you",
+      "everyday",
+      "congratulations",
+      "friendship",
+    ],
   },
   {
     slug: "elegance-is-bliss-korean-wrap-bouquet",
@@ -114,13 +163,23 @@ export const PRODUCTS: Product[] = [
     price: "$199.99",
     image: "https://www.valleygirlflorist.com/assets/2042/14/DimFeatured/IMG_6853_(1).jpeg?335602",
     url: "https://www.valleygirlflorist.com/mothers-day-24-roses-and-chocolate-strawberries/",
-    categories: ["birthday", "anniversary", "just-because", "romance", "thank-you", "everyday", "baby", "congratulations"],
+    categories: [
+      "birthday",
+      "anniversary",
+      "just-because",
+      "romance",
+      "thank-you",
+      "everyday",
+      "baby",
+      "congratulations",
+    ],
   },
   {
     slug: "the-love-package-",
     name: "The Love Package",
     price: "$199.95",
-    image: "https://www.valleygirlflorist.com/assets/2042/14/DimFeatured/IMG_0005_Original.jpg?295666",
+    image:
+      "https://www.valleygirlflorist.com/assets/2042/14/DimFeatured/IMG_0005_Original.jpg?295666",
     url: "https://www.valleygirlflorist.com/the-love-package-/",
     categories: ["birthday", "anniversary", "romance"],
   },
@@ -128,7 +187,8 @@ export const PRODUCTS: Product[] = [
     slug: "tulip-delight",
     name: "Tulip Delights",
     price: "$59.99",
-    image: "https://www.valleygirlflorist.com/assets/2042/14/DimFeatured/cup_of_delights_6fb615_(1).jpg?284759",
+    image:
+      "https://www.valleygirlflorist.com/assets/2042/14/DimFeatured/cup_of_delights_6fb615_(1).jpg?284759",
     url: "https://www.valleygirlflorist.com/tulip-delight/",
     categories: ["birthday", "get-well", "thank-you", "baby", "congratulations", "friendship"],
   },
@@ -136,7 +196,8 @@ export const PRODUCTS: Product[] = [
     slug: "with-love-package",
     name: "With Love Package",
     price: "$150.00",
-    image: "https://www.valleygirlflorist.com/assets/2042/14/DimFeatured/IMG_0006_Original.jpg?295670",
+    image:
+      "https://www.valleygirlflorist.com/assets/2042/14/DimFeatured/IMG_0006_Original.jpg?295670",
     url: "https://www.valleygirlflorist.com/with-love-package/",
     categories: ["birthday", "anniversary", "romance"],
   },
@@ -162,7 +223,15 @@ export const PRODUCTS: Product[] = [
     price: "$105.00",
     image: "https://www.valleygirlflorist.com/assets/2042/14/DimFeatured/IMG_41662.jpg?284690",
     url: "https://www.valleygirlflorist.com/falling-in-love-with-fall/",
-    categories: ["anniversary", "get-well", "just-because", "romance", "everyday", "congratulations", "friendship"],
+    categories: [
+      "anniversary",
+      "get-well",
+      "just-because",
+      "romance",
+      "everyday",
+      "congratulations",
+      "friendship",
+    ],
   },
   {
     slug: "always-adored-bouquet-",
@@ -200,9 +269,17 @@ export const PRODUCTS: Product[] = [
     slug: "mug-of-daisy-delights",
     name: "Mug Of Daisy Delights",
     price: "$64.99",
-    image: "https://www.valleygirlflorist.com/assets/2042/14/DimFeatured/D3847F18-D1CF-4A11-9C25-0AB8D13765D6.jpeg?301391",
+    image:
+      "https://www.valleygirlflorist.com/assets/2042/14/DimFeatured/D3847F18-D1CF-4A11-9C25-0AB8D13765D6.jpeg?301391",
     url: "https://www.valleygirlflorist.com/mug-of-daisy-delights/",
-    categories: ["get-well", "just-because", "thank-you", "everyday", "congratulations", "friendship"],
+    categories: [
+      "get-well",
+      "just-because",
+      "thank-you",
+      "everyday",
+      "congratulations",
+      "friendship",
+    ],
   },
   {
     slug: "the-perfect-guest-duo",
@@ -248,7 +325,8 @@ export const PRODUCTS: Product[] = [
     slug: "eden-s-garden-handwrapped-bouquet",
     name: "Eden's Garden Handwrapped Bouquet",
     price: "$84.99",
-    image: "https://www.valleygirlflorist.com/assets/1/14/DimFeatured/RESHOOT_-_BNC006-16M.jpg?236216",
+    image:
+      "https://www.valleygirlflorist.com/assets/1/14/DimFeatured/RESHOOT_-_BNC006-16M.jpg?236216",
     url: "https://www.valleygirlflorist.com/eden-s-garden-handwrapped-bouquet/",
     categories: ["friendship"],
   },
@@ -264,7 +342,8 @@ export const PRODUCTS: Product[] = [
     slug: "good-day-bouquet-1",
     name: "Good Day Bouquet",
     price: "$59.99",
-    image: "https://www.valleygirlflorist.com/assets/1/14/DimFeatured/179057_Good_Day_Bouquet_59.99.jpg?280528",
+    image:
+      "https://www.valleygirlflorist.com/assets/1/14/DimFeatured/179057_Good_Day_Bouquet_59.99.jpg?280528",
     url: "https://www.valleygirlflorist.com/good-day-bouquet-1/",
     categories: ["friendship"],
   },
@@ -272,7 +351,8 @@ export const PRODUCTS: Product[] = [
     slug: "shimmering-harvest-handwrapped-bouquet",
     name: "Shimmering Harvest Handwrapped Bouquet",
     price: "$84.99",
-    image: "https://www.valleygirlflorist.com/assets/1/14/DimFeatured/RESHOOT_-_BNC007-16M.jpg?236219",
+    image:
+      "https://www.valleygirlflorist.com/assets/1/14/DimFeatured/RESHOOT_-_BNC007-16M.jpg?236219",
     url: "https://www.valleygirlflorist.com/shimmering-harvest-handwrapped-bouquet/",
     categories: ["friendship"],
   },
@@ -384,7 +464,8 @@ export const PRODUCTS: Product[] = [
     slug: "designer-s-choice-arrangement",
     name: "Designer's Choice Arrangement",
     price: "$79.99 - $124.99",
-    image: "https://www.valleygirlflorist.com/assets/1/14/DimFeatured/600x600-Designers_Choice.jpg?36140",
+    image:
+      "https://www.valleygirlflorist.com/assets/1/14/DimFeatured/600x600-Designers_Choice.jpg?36140",
     url: "https://www.valleygirlflorist.com/designer-s-choice-arrangement/",
     categories: ["baby"],
   },
@@ -472,7 +553,8 @@ export const PRODUCTS: Product[] = [
     slug: "blue-and-white-mixed-half-casket-cover-1",
     name: "Blue & White Mixed Half Casket Cover",
     price: "$254.99",
-    image: "https://www.valleygirlflorist.com/assets/1/14/DimFeatured/91222_HR_fd_03_27_17_floral.jpg?118263",
+    image:
+      "https://www.valleygirlflorist.com/assets/1/14/DimFeatured/91222_HR_fd_03_27_17_floral.jpg?118263",
     url: "https://www.valleygirlflorist.com/blue-and-white-mixed-half-casket-cover-1/",
     categories: ["sympathy"],
   },
@@ -488,7 +570,8 @@ export const PRODUCTS: Product[] = [
     slug: "graceful-style-by-southern-living-for-sympathy",
     name: "Graceful Style\u2122 By Southern Living\u00ae For Sympathy",
     price: "$84.99",
-    image: "https://www.valleygirlflorist.com/assets/1/14/DimFeatured/161271_HR_fd_04_12_17.jpg?118302",
+    image:
+      "https://www.valleygirlflorist.com/assets/1/14/DimFeatured/161271_HR_fd_04_12_17.jpg?118302",
     url: "https://www.valleygirlflorist.com/graceful-style-by-southern-living-for-sympathy/",
     categories: ["sympathy"],
   },
@@ -496,7 +579,8 @@ export const PRODUCTS: Product[] = [
     slug: "healing-tears-all-white",
     name: "Healing Tears\u2122 All White",
     price: "$64.99 - $74.99",
-    image: "https://www.valleygirlflorist.com/assets/1/14/DimFeatured/148687l_HR_fd_03_15_17.jpg?114959",
+    image:
+      "https://www.valleygirlflorist.com/assets/1/14/DimFeatured/148687l_HR_fd_03_15_17.jpg?114959",
     url: "https://www.valleygirlflorist.com/healing-tears-all-white/",
     categories: ["sympathy"],
   },
@@ -504,7 +588,8 @@ export const PRODUCTS: Product[] = [
     slug: "healing-tears-blue-and-white",
     name: "Healing Tears\u2122 Blue & White",
     price: "$74.99",
-    image: "https://www.valleygirlflorist.com/assets/1/14/DimFeatured/148683l_HR_fd_03_15_17.jpg?115880",
+    image:
+      "https://www.valleygirlflorist.com/assets/1/14/DimFeatured/148683l_HR_fd_03_15_17.jpg?115880",
     url: "https://www.valleygirlflorist.com/healing-tears-blue-and-white/",
     categories: ["sympathy"],
   },
@@ -512,7 +597,8 @@ export const PRODUCTS: Product[] = [
     slug: "healing-tears-lavender-and-white",
     name: "Healing Tears\u2122 Lavender & White",
     price: "$64.99 - $74.99",
-    image: "https://www.valleygirlflorist.com/assets/1/14/DimFeatured/148685l_HR_fd_03_15_17.jpg?116828",
+    image:
+      "https://www.valleygirlflorist.com/assets/1/14/DimFeatured/148685l_HR_fd_03_15_17.jpg?116828",
     url: "https://www.valleygirlflorist.com/healing-tears-lavender-and-white/",
     categories: ["sympathy"],
   },
@@ -520,7 +606,8 @@ export const PRODUCTS: Product[] = [
     slug: "healing-tears-multicolor-pastel",
     name: "Healing Tears\u2122 Multicolor Pastel",
     price: "$64.99 - $74.99",
-    image: "https://www.valleygirlflorist.com/assets/1/14/DimFeatured/148691L_HR_fd_05_16_17.jpg?116922",
+    image:
+      "https://www.valleygirlflorist.com/assets/1/14/DimFeatured/148691L_HR_fd_05_16_17.jpg?116922",
     url: "https://www.valleygirlflorist.com/healing-tears-multicolor-pastel/",
     categories: ["sympathy"],
   },
@@ -536,7 +623,8 @@ export const PRODUCTS: Product[] = [
     slug: "thoughts-and-prayers-fireside-basket-white",
     name: "Thoughts And Prayers Fireside Basket-White",
     price: "$124.99",
-    image: "https://www.valleygirlflorist.com/assets/1/14/DimFeatured/91204_HR_fd_05_10_17.jpg?118123",
+    image:
+      "https://www.valleygirlflorist.com/assets/1/14/DimFeatured/91204_HR_fd_05_10_17.jpg?118123",
     url: "https://www.valleygirlflorist.com/thoughts-and-prayers-fireside-basket-white/",
     categories: ["sympathy"],
   },
@@ -544,7 +632,8 @@ export const PRODUCTS: Product[] = [
     slug: "thoughts-and-prayers-fireside-basket-white-roses",
     name: "Thoughts And Prayers Fireside Basket-White Roses",
     price: "$124.99",
-    image: "https://www.valleygirlflorist.com/assets/1/14/DimFeatured/91219_HR_fd_05_11_17.jpg?118262",
+    image:
+      "https://www.valleygirlflorist.com/assets/1/14/DimFeatured/91219_HR_fd_05_11_17.jpg?118262",
     url: "https://www.valleygirlflorist.com/thoughts-and-prayers-fireside-basket-white-roses/",
     categories: ["sympathy"],
   },
@@ -552,7 +641,8 @@ export const PRODUCTS: Product[] = [
     slug: "thoughts-and-prayers-fireside-basket-red-roses",
     name: "Thoughts And Prayers\u2122 Fireside Basket - Red Roses",
     price: "$124.99",
-    image: "https://www.valleygirlflorist.com/assets/1/14/DimFeatured/91218_HR_fd_05_08_17.jpg?118261",
+    image:
+      "https://www.valleygirlflorist.com/assets/1/14/DimFeatured/91218_HR_fd_05_08_17.jpg?118261",
     url: "https://www.valleygirlflorist.com/thoughts-and-prayers-fireside-basket-red-roses/",
     categories: ["sympathy"],
   },
@@ -560,7 +650,8 @@ export const PRODUCTS: Product[] = [
     slug: "thoughts-and-prayers-peach-orange-and-white-fireside-basket",
     name: "Thoughts And Prayers\u2122 Peach, Orange & White Fireside Basket",
     price: "$124.99",
-    image: "https://www.valleygirlflorist.com/assets/1/14/DimFeatured/91203_HR_fd_05_09_17.jpg?118122",
+    image:
+      "https://www.valleygirlflorist.com/assets/1/14/DimFeatured/91203_HR_fd_05_09_17.jpg?118122",
     url: "https://www.valleygirlflorist.com/thoughts-and-prayers-peach-orange-and-white-fireside-basket/",
     categories: ["sympathy"],
   },

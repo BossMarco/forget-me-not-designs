@@ -1,11 +1,45 @@
 # Forget Me Not Flowers & Gifts
 
-> Premium local florist by Mariela serving Pharr, McAllen, Mission, Weslaco and the Rio Grande Valley — hand-arranged bouquets, weddings, events, and curated gift baskets. Order online at valleygirlflorist.com or call (956) 313-1847.
+> Local florist by Mariela serving the entire Rio Grande Valley, Texas — from Rio Grande City to South Padre Island. Hand-arranged flowers and same-day delivery for weddings, quinceañeras, proms, birthdays, sympathy, Mother's Day, Valentine's Day and more. Call (956) 313-1847.
 
-## Pages
+## Main
 
 - [Home](/): Studio overview, services, featured arrangements, gallery, contact.
-- [Shop](/shop): Browse all arrangements by occasion.
+- [Flower Delivery](/flower-delivery): RGV cities we deliver to, organized by county.
+- [Occasions](/occasions): Flowers for every occasion across the Valley.
+- [Shop](/shop): Browse arrangements by occasion.
+
+## Occasions
+
+- [Weddings](/occasions/weddings)
+- [Events](/occasions/events)
+- [Birthday](/occasions/birthday)
+- [Quinceañera](/occasions/quinceanera)
+- [Prom](/occasions/prom)
+- [Baby Shower](/occasions/baby-shower)
+- [Gender Reveal](/occasions/gender-reveal)
+- [Mother's Day](/occasions/mothers-day)
+- [Valentine's Day](/occasions/valentines-day)
+- [Anniversary](/occasions/anniversary)
+- [Sympathy & Funeral](/occasions/sympathy)
+- [Get Well](/occasions/get-well)
+- [Congratulations](/occasions/congratulations)
+- [Just Because](/occasions/just-because)
+- [Roses & Romance](/occasions/romance)
+
+## Featured Cities
+
+- [McAllen](/flower-delivery/mcallen)
+- [Edinburg](/flower-delivery/edinburg)
+- [Pharr](/flower-delivery/pharr)
+- [Mission](/flower-delivery/mission)
+- [Weslaco](/flower-delivery/weslaco)
+- [Harlingen](/flower-delivery/harlingen)
+- [Brownsville](/flower-delivery/brownsville)
+- [South Padre Island](/flower-delivery/south-padre-island)
+
+## Shop Categories
+
 - [Birthday](/shop/birthday)
 - [Anniversary](/shop/anniversary)
 - [Romance](/shop/romance)

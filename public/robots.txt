@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://forget-me-not-designs.lovable.app/sitemap.xml
+Sitemap: https://forget-me-not-designs.vercel.app/sitemap.xml

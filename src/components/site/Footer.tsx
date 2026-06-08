@@ -1,23 +1,125 @@
+import { Link } from "@tanstack/react-router";
+import { TIER1_CITIES } from "@/data/cities";
+import { OCCASIONS } from "@/data/occasions";
+import { BUSINESS } from "@/lib/site";
+
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-background py-12">
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 md:flex-row">
-        <div className="flex items-center gap-3">
-          <span className="grid h-9 w-9 place-items-center rounded-full bg-primary/10 text-primary font-serif text-xl italic">f</span>
-          <div className="leading-tight">
-            <div className="font-serif text-base text-foreground">Forget Me Not Flowers &amp; Gifts</div>
-            <div className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">by Mariela</div>
+    <footer className="border-t border-border bg-background">
+      {/* Link columns — sitewide discoverability for the programmatic hubs */}
+      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-6 py-14 sm:grid-cols-3 lg:grid-cols-4">
+        <div className="col-span-2 sm:col-span-1">
+          <div className="flex items-center gap-3">
+            <span className="grid h-9 w-9 place-items-center rounded-full bg-primary/10 text-primary font-serif text-xl italic">
+              f
+            </span>
+            <div className="leading-tight">
+              <div className="font-serif text-base text-foreground">
+                Forget Me Not Flowers &amp; Gifts
+              </div>
+              <div className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
+                by {BUSINESS.owner}
+              </div>
+            </div>
           </div>
+          <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
+            Hand-arranged flowers & same-day delivery across the {BUSINESS.region}.
+          </p>
+          <a
+            href={BUSINESS.phonePrimaryTel}
+            className="mt-4 inline-block font-serif text-xl text-foreground hover:text-primary"
+          >
+            {BUSINESS.phonePrimaryDisplay}
+          </a>
         </div>
-        <nav className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
-          <a href="/#about" className="hover:text-primary">About</a>
-          <a href="/#services" className="hover:text-primary">Services</a>
-          <a href="/shop" className="hover:text-primary">Shop</a>
-          <a href="/#gallery" className="hover:text-primary">Gallery</a>
-          <a href="/#contact" className="hover:text-primary">Contact</a>
-          <a href="tel:+19563131847" className="hover:text-primary">(956) 313-1847</a>
-        </nav>
-        <div className="text-xs text-muted-foreground">© {new Date().getFullYear()} Forget Me Not Flowers &amp; Gifts</div>
+
+        <div>
+          <h3 className="text-xs font-semibold uppercase tracking-widest text-foreground">
+            Cities We Serve
+          </h3>
+          <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+            {TIER1_CITIES.map((c) => (
+              <li key={c.slug}>
+                <Link
+                  to="/flower-delivery/$city"
+                  params={{ city: c.slug }}
+                  className="hover:text-primary"
+                >
+                  {c.name}
+                </Link>
+              </li>
+            ))}
+            <li>
+              <Link to="/flower-delivery" className="font-medium hover:text-primary">
+                All RGV cities →
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-xs font-semibold uppercase tracking-widest text-foreground">
+            Shop by Occasion
+          </h3>
+          <ul className="mt-4 grid grid-cols-1 gap-2 text-sm text-muted-foreground">
+            {OCCASIONS.slice(0, 9).map((o) => (
+              <li key={o.slug}>
+                <Link
+                  to="/occasions/$occasion"
+                  params={{ occasion: o.slug }}
+                  className="hover:text-primary"
+                >
+                  {o.plural}
+                </Link>
+              </li>
+            ))}
+            <li>
+              <Link to="/occasions" className="font-medium hover:text-primary">
+                All occasions →
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-xs font-semibold uppercase tracking-widest text-foreground">
+            Explore
+          </h3>
+          <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+            <li>
+              <a href="/#about" className="hover:text-primary">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="/#services" className="hover:text-primary">
+                Services
+              </a>
+            </li>
+            <li>
+              <Link to="/shop" className="hover:text-primary">
+                Shop
+              </Link>
+            </li>
+            <li>
+              <a href="/#gallery" className="hover:text-primary">
+                Gallery
+              </a>
+            </li>
+            <li>
+              <a href="/#contact" className="hover:text-primary">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="border-t border-border/60">
+        <div className="mx-auto max-w-7xl px-6 py-6 text-center text-xs text-muted-foreground">
+          © {new Date().getFullYear()} Forget Me Not Flowers &amp; Gifts · Serving the{" "}
+          {BUSINESS.region}, {BUSINESS.state}
+        </div>
       </div>
     </footer>
   );

@@ -25,17 +25,17 @@ export function About() {
           </h2>
           <div className="mt-8 space-y-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
             <p className="font-serif text-2xl italic text-foreground/90">
-              &ldquo;Our goal is simple: to help you recognize and share life&rsquo;s
-              unforgettable moments through the beauty of flowers.&rdquo;
+              &ldquo;Our goal is simple: to help you recognize and share life&rsquo;s unforgettable
+              moments through the beauty of flowers.&rdquo;
             </p>
             <p>
-              Forget Me Not Flowers &amp; Gifts is a small, local studio built on years
-              of careful craft. Every arrangement is composed by hand, sourced fresh,
-              and styled to feel personal &mdash; never templated.
+              Forget Me Not Flowers &amp; Gifts is a small, local studio built on years of careful
+              craft. Every arrangement is composed by hand, sourced fresh, and styled to feel
+              personal &mdash; never templated.
             </p>
             <p>
-              Whether it&rsquo;s a Tuesday surprise or the centerpiece of your wedding
-              day, we treat each order with the same quiet attention to detail.
+              Whether it&rsquo;s a Tuesday surprise or the centerpiece of your wedding day, we treat
+              each order with the same quiet attention to detail.
             </p>
           </div>
 
@@ -47,7 +47,9 @@ export function About() {
             ].map((s) => (
               <div key={s.v}>
                 <dt className="font-serif text-3xl text-primary">{s.k}</dt>
-                <dd className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">{s.v}</dd>
+                <dd className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">
+                  {s.v}
+                </dd>
               </div>
             ))}
           </dl>

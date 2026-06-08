@@ -8,8 +8,8 @@ import { Gallery } from "@/components/site/Gallery";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 import { Toaster } from "@/components/ui/sonner";
-
-const SITE_URL = "https://forget-me-not-designs.lovable.app";
+import { SITE_URL } from "@/lib/site";
+import { ld, buildFlorist } from "@/lib/schema";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -28,30 +28,8 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "website" },
       { property: "og:url", content: SITE_URL + "/" },
     ],
-    links: [
-      { rel: "canonical", href: SITE_URL + "/" },
-    ],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Florist",
-          name: "Forget Me Not Flowers & Gifts",
-          description:
-            "Premium local florist by Mariela — hand-arranged bouquets, weddings, events, and curated gift baskets.",
-          telephone: "+1-956-313-1847",
-          url: SITE_URL,
-          areaServed: "Rio Grande Valley",
-          address: {
-            "@type": "PostalAddress",
-            addressRegion: "TX",
-            addressCountry: "US",
-          },
-          openingHours: "Mo-Sa 09:00-18:00",
-        }),
-      },
-    ],
+    links: [{ rel: "canonical", href: SITE_URL + "/" }],
+    scripts: [ld(buildFlorist())],
   }),
   component: Index,
 });

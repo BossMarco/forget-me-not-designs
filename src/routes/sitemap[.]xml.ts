@@ -1,55 +1,20 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
-import { CATEGORIES } from "@/data/products";
+import { sitemapIndexResponse } from "@/lib/sitemap";
 
-const BASE_URL = "https://forget-me-not-designs.lovable.app";
-
-interface SitemapEntry {
-  path: string;
-  changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
-  priority?: string;
-}
-
+// Sitemap index — points to the split child sitemaps. Keeping each page type in
+// its own sitemap makes indexation easier to monitor and lets us submit tiers in
+// phases (Tier-1 matrix first, Tier-2/3 later).
 export const Route = createFileRoute("/sitemap.xml")({
   server: {
     handlers: {
-      GET: async () => {
-        const entries: SitemapEntry[] = [
-          { path: "/", changefreq: "weekly", priority: "1.0" },
-          { path: "/shop", changefreq: "weekly", priority: "0.9" },
-          ...CATEGORIES.map((c) => ({
-            path: `/shop/${c.slug}`,
-            changefreq: "weekly" as const,
-            priority: "0.8",
-          })),
-        ];
-
-        const urls = entries.map((e) =>
-          [
-            `  <url>`,
-            `    <loc>${BASE_URL}${e.path}</loc>`,
-            e.changefreq ? `    <changefreq>${e.changefreq}</changefreq>` : null,
-            e.priority ? `    <priority>${e.priority}</priority>` : null,
-            `  </url>`,
-          ]
-            .filter(Boolean)
-            .join("\n"),
-        );
-
-        const xml = [
-          `<?xml version="1.0" encoding="UTF-8"?>`,
-          `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`,
-          ...urls,
-          `</urlset>`,
-        ].join("\n");
-
-        return new Response(xml, {
-          headers: {
-            "Content-Type": "application/xml",
-            "Cache-Control": "public, max-age=3600",
-          },
-        });
-      },
+      GET: async () =>
+        sitemapIndexResponse([
+          "/sitemap-core.xml",
+          "/sitemap-cities.xml",
+          "/sitemap-occasions-1.xml",
+          "/sitemap-occasions-2.xml",
+        ]),
     },
   },
 });

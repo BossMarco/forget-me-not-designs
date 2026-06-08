@@ -10,13 +10,45 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as SitemapOccasions2DotxmlRouteImport } from './routes/sitemap-occasions-2[.]xml'
+import { Route as SitemapOccasions1DotxmlRouteImport } from './routes/sitemap-occasions-1[.]xml'
+import { Route as SitemapCoreDotxmlRouteImport } from './routes/sitemap-core[.]xml'
+import { Route as SitemapCitiesDotxmlRouteImport } from './routes/sitemap-cities[.]xml'
 import { Route as ShopRouteImport } from './routes/shop'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ShopIndexRouteImport } from './routes/shop.index'
+import { Route as OccasionsIndexRouteImport } from './routes/occasions.index'
+import { Route as FlowerDeliveryIndexRouteImport } from './routes/flower-delivery.index'
 import { Route as ShopCategoryRouteImport } from './routes/shop.$category'
+import { Route as OccasionsOccasionRouteImport } from './routes/occasions.$occasion'
+import { Route as FlowerDeliveryCityRouteImport } from './routes/flower-delivery.$city'
+import { Route as ApiLeadRouteImport } from './routes/api.lead'
+import { Route as FlowerDeliveryCityIndexRouteImport } from './routes/flower-delivery.$city.index'
+import { Route as FlowerDeliveryCityOccasionRouteImport } from './routes/flower-delivery.$city.$occasion'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapOccasions2DotxmlRoute = SitemapOccasions2DotxmlRouteImport.update({
+  id: '/sitemap-occasions-2.xml',
+  path: '/sitemap-occasions-2.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapOccasions1DotxmlRoute = SitemapOccasions1DotxmlRouteImport.update({
+  id: '/sitemap-occasions-1.xml',
+  path: '/sitemap-occasions-1.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapCoreDotxmlRoute = SitemapCoreDotxmlRouteImport.update({
+  id: '/sitemap-core.xml',
+  path: '/sitemap-core.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapCitiesDotxmlRoute = SitemapCitiesDotxmlRouteImport.update({
+  id: '/sitemap-cities.xml',
+  path: '/sitemap-cities.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ShopRoute = ShopRouteImport.update({
@@ -29,43 +61,174 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ShopIndexRoute = ShopIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ShopRoute,
+} as any)
+const OccasionsIndexRoute = OccasionsIndexRouteImport.update({
+  id: '/occasions/',
+  path: '/occasions/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FlowerDeliveryIndexRoute = FlowerDeliveryIndexRouteImport.update({
+  id: '/flower-delivery/',
+  path: '/flower-delivery/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ShopCategoryRoute = ShopCategoryRouteImport.update({
   id: '/$category',
   path: '/$category',
   getParentRoute: () => ShopRoute,
 } as any)
+const OccasionsOccasionRoute = OccasionsOccasionRouteImport.update({
+  id: '/occasions/$occasion',
+  path: '/occasions/$occasion',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FlowerDeliveryCityRoute = FlowerDeliveryCityRouteImport.update({
+  id: '/flower-delivery/$city',
+  path: '/flower-delivery/$city',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiLeadRoute = ApiLeadRouteImport.update({
+  id: '/api/lead',
+  path: '/api/lead',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FlowerDeliveryCityIndexRoute = FlowerDeliveryCityIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => FlowerDeliveryCityRoute,
+} as any)
+const FlowerDeliveryCityOccasionRoute =
+  FlowerDeliveryCityOccasionRouteImport.update({
+    id: '/$occasion',
+    path: '/$occasion',
+    getParentRoute: () => FlowerDeliveryCityRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/shop': typeof ShopRouteWithChildren
+  '/sitemap-cities.xml': typeof SitemapCitiesDotxmlRoute
+  '/sitemap-core.xml': typeof SitemapCoreDotxmlRoute
+  '/sitemap-occasions-1.xml': typeof SitemapOccasions1DotxmlRoute
+  '/sitemap-occasions-2.xml': typeof SitemapOccasions2DotxmlRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/api/lead': typeof ApiLeadRoute
+  '/flower-delivery/$city': typeof FlowerDeliveryCityRouteWithChildren
+  '/occasions/$occasion': typeof OccasionsOccasionRoute
   '/shop/$category': typeof ShopCategoryRoute
+  '/flower-delivery/': typeof FlowerDeliveryIndexRoute
+  '/occasions/': typeof OccasionsIndexRoute
+  '/shop/': typeof ShopIndexRoute
+  '/flower-delivery/$city/$occasion': typeof FlowerDeliveryCityOccasionRoute
+  '/flower-delivery/$city/': typeof FlowerDeliveryCityIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/shop': typeof ShopRouteWithChildren
+  '/sitemap-cities.xml': typeof SitemapCitiesDotxmlRoute
+  '/sitemap-core.xml': typeof SitemapCoreDotxmlRoute
+  '/sitemap-occasions-1.xml': typeof SitemapOccasions1DotxmlRoute
+  '/sitemap-occasions-2.xml': typeof SitemapOccasions2DotxmlRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/api/lead': typeof ApiLeadRoute
+  '/occasions/$occasion': typeof OccasionsOccasionRoute
   '/shop/$category': typeof ShopCategoryRoute
+  '/flower-delivery': typeof FlowerDeliveryIndexRoute
+  '/occasions': typeof OccasionsIndexRoute
+  '/shop': typeof ShopIndexRoute
+  '/flower-delivery/$city/$occasion': typeof FlowerDeliveryCityOccasionRoute
+  '/flower-delivery/$city': typeof FlowerDeliveryCityIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/shop': typeof ShopRouteWithChildren
+  '/sitemap-cities.xml': typeof SitemapCitiesDotxmlRoute
+  '/sitemap-core.xml': typeof SitemapCoreDotxmlRoute
+  '/sitemap-occasions-1.xml': typeof SitemapOccasions1DotxmlRoute
+  '/sitemap-occasions-2.xml': typeof SitemapOccasions2DotxmlRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/api/lead': typeof ApiLeadRoute
+  '/flower-delivery/$city': typeof FlowerDeliveryCityRouteWithChildren
+  '/occasions/$occasion': typeof OccasionsOccasionRoute
   '/shop/$category': typeof ShopCategoryRoute
+  '/flower-delivery/': typeof FlowerDeliveryIndexRoute
+  '/occasions/': typeof OccasionsIndexRoute
+  '/shop/': typeof ShopIndexRoute
+  '/flower-delivery/$city/$occasion': typeof FlowerDeliveryCityOccasionRoute
+  '/flower-delivery/$city/': typeof FlowerDeliveryCityIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/shop' | '/sitemap.xml' | '/shop/$category'
+  fullPaths:
+    | '/'
+    | '/shop'
+    | '/sitemap-cities.xml'
+    | '/sitemap-core.xml'
+    | '/sitemap-occasions-1.xml'
+    | '/sitemap-occasions-2.xml'
+    | '/sitemap.xml'
+    | '/api/lead'
+    | '/flower-delivery/$city'
+    | '/occasions/$occasion'
+    | '/shop/$category'
+    | '/flower-delivery/'
+    | '/occasions/'
+    | '/shop/'
+    | '/flower-delivery/$city/$occasion'
+    | '/flower-delivery/$city/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/shop' | '/sitemap.xml' | '/shop/$category'
-  id: '__root__' | '/' | '/shop' | '/sitemap.xml' | '/shop/$category'
+  to:
+    | '/'
+    | '/sitemap-cities.xml'
+    | '/sitemap-core.xml'
+    | '/sitemap-occasions-1.xml'
+    | '/sitemap-occasions-2.xml'
+    | '/sitemap.xml'
+    | '/api/lead'
+    | '/occasions/$occasion'
+    | '/shop/$category'
+    | '/flower-delivery'
+    | '/occasions'
+    | '/shop'
+    | '/flower-delivery/$city/$occasion'
+    | '/flower-delivery/$city'
+  id:
+    | '__root__'
+    | '/'
+    | '/shop'
+    | '/sitemap-cities.xml'
+    | '/sitemap-core.xml'
+    | '/sitemap-occasions-1.xml'
+    | '/sitemap-occasions-2.xml'
+    | '/sitemap.xml'
+    | '/api/lead'
+    | '/flower-delivery/$city'
+    | '/occasions/$occasion'
+    | '/shop/$category'
+    | '/flower-delivery/'
+    | '/occasions/'
+    | '/shop/'
+    | '/flower-delivery/$city/$occasion'
+    | '/flower-delivery/$city/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ShopRoute: typeof ShopRouteWithChildren
+  SitemapCitiesDotxmlRoute: typeof SitemapCitiesDotxmlRoute
+  SitemapCoreDotxmlRoute: typeof SitemapCoreDotxmlRoute
+  SitemapOccasions1DotxmlRoute: typeof SitemapOccasions1DotxmlRoute
+  SitemapOccasions2DotxmlRoute: typeof SitemapOccasions2DotxmlRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  ApiLeadRoute: typeof ApiLeadRoute
+  FlowerDeliveryCityRoute: typeof FlowerDeliveryCityRouteWithChildren
+  OccasionsOccasionRoute: typeof OccasionsOccasionRoute
+  FlowerDeliveryIndexRoute: typeof FlowerDeliveryIndexRoute
+  OccasionsIndexRoute: typeof OccasionsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -75,6 +238,34 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap-occasions-2.xml': {
+      id: '/sitemap-occasions-2.xml'
+      path: '/sitemap-occasions-2.xml'
+      fullPath: '/sitemap-occasions-2.xml'
+      preLoaderRoute: typeof SitemapOccasions2DotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap-occasions-1.xml': {
+      id: '/sitemap-occasions-1.xml'
+      path: '/sitemap-occasions-1.xml'
+      fullPath: '/sitemap-occasions-1.xml'
+      preLoaderRoute: typeof SitemapOccasions1DotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap-core.xml': {
+      id: '/sitemap-core.xml'
+      path: '/sitemap-core.xml'
+      fullPath: '/sitemap-core.xml'
+      preLoaderRoute: typeof SitemapCoreDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap-cities.xml': {
+      id: '/sitemap-cities.xml'
+      path: '/sitemap-cities.xml'
+      fullPath: '/sitemap-cities.xml'
+      preLoaderRoute: typeof SitemapCitiesDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/shop': {
@@ -91,6 +282,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/shop/': {
+      id: '/shop/'
+      path: '/'
+      fullPath: '/shop/'
+      preLoaderRoute: typeof ShopIndexRouteImport
+      parentRoute: typeof ShopRoute
+    }
+    '/occasions/': {
+      id: '/occasions/'
+      path: '/occasions'
+      fullPath: '/occasions/'
+      preLoaderRoute: typeof OccasionsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/flower-delivery/': {
+      id: '/flower-delivery/'
+      path: '/flower-delivery'
+      fullPath: '/flower-delivery/'
+      preLoaderRoute: typeof FlowerDeliveryIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/shop/$category': {
       id: '/shop/$category'
       path: '/$category'
@@ -98,24 +310,93 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ShopCategoryRouteImport
       parentRoute: typeof ShopRoute
     }
+    '/occasions/$occasion': {
+      id: '/occasions/$occasion'
+      path: '/occasions/$occasion'
+      fullPath: '/occasions/$occasion'
+      preLoaderRoute: typeof OccasionsOccasionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/flower-delivery/$city': {
+      id: '/flower-delivery/$city'
+      path: '/flower-delivery/$city'
+      fullPath: '/flower-delivery/$city'
+      preLoaderRoute: typeof FlowerDeliveryCityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/lead': {
+      id: '/api/lead'
+      path: '/api/lead'
+      fullPath: '/api/lead'
+      preLoaderRoute: typeof ApiLeadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/flower-delivery/$city/': {
+      id: '/flower-delivery/$city/'
+      path: '/'
+      fullPath: '/flower-delivery/$city/'
+      preLoaderRoute: typeof FlowerDeliveryCityIndexRouteImport
+      parentRoute: typeof FlowerDeliveryCityRoute
+    }
+    '/flower-delivery/$city/$occasion': {
+      id: '/flower-delivery/$city/$occasion'
+      path: '/$occasion'
+      fullPath: '/flower-delivery/$city/$occasion'
+      preLoaderRoute: typeof FlowerDeliveryCityOccasionRouteImport
+      parentRoute: typeof FlowerDeliveryCityRoute
+    }
   }
 }
 
 interface ShopRouteChildren {
   ShopCategoryRoute: typeof ShopCategoryRoute
+  ShopIndexRoute: typeof ShopIndexRoute
 }
 
 const ShopRouteChildren: ShopRouteChildren = {
   ShopCategoryRoute: ShopCategoryRoute,
+  ShopIndexRoute: ShopIndexRoute,
 }
 
 const ShopRouteWithChildren = ShopRoute._addFileChildren(ShopRouteChildren)
 
+interface FlowerDeliveryCityRouteChildren {
+  FlowerDeliveryCityOccasionRoute: typeof FlowerDeliveryCityOccasionRoute
+  FlowerDeliveryCityIndexRoute: typeof FlowerDeliveryCityIndexRoute
+}
+
+const FlowerDeliveryCityRouteChildren: FlowerDeliveryCityRouteChildren = {
+  FlowerDeliveryCityOccasionRoute: FlowerDeliveryCityOccasionRoute,
+  FlowerDeliveryCityIndexRoute: FlowerDeliveryCityIndexRoute,
+}
+
+const FlowerDeliveryCityRouteWithChildren =
+  FlowerDeliveryCityRoute._addFileChildren(FlowerDeliveryCityRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ShopRoute: ShopRouteWithChildren,
+  SitemapCitiesDotxmlRoute: SitemapCitiesDotxmlRoute,
+  SitemapCoreDotxmlRoute: SitemapCoreDotxmlRoute,
+  SitemapOccasions1DotxmlRoute: SitemapOccasions1DotxmlRoute,
+  SitemapOccasions2DotxmlRoute: SitemapOccasions2DotxmlRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  ApiLeadRoute: ApiLeadRoute,
+  FlowerDeliveryCityRoute: FlowerDeliveryCityRouteWithChildren,
+  OccasionsOccasionRoute: OccasionsOccasionRoute,
+  FlowerDeliveryIndexRoute: FlowerDeliveryIndexRoute,
+  OccasionsIndexRoute: OccasionsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

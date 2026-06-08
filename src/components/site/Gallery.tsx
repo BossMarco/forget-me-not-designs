@@ -12,12 +12,10 @@ const GALLERY_SLUGS = [
 
 const spans = ["row-span-2", "", "", "", "row-span-2", ""];
 
-const items = GALLERY_SLUGS
-  .map((s, i) => {
-    const p = PRODUCTS.find((p) => p.slug === s);
-    return p ? { ...p, span: spans[i] } : null;
-  })
-  .filter((p): p is NonNullable<typeof p> => Boolean(p));
+const items = GALLERY_SLUGS.map((s, i) => {
+  const p = PRODUCTS.find((p) => p.slug === s);
+  return p ? { ...p, span: spans[i] } : null;
+}).filter((p): p is NonNullable<typeof p> => Boolean(p));
 
 export function Gallery() {
   return (
