@@ -27,6 +27,27 @@ export default defineConfig({
             publicDir: ".vercel/output/static",
             serverDir: ".vercel/output/functions/__server.func",
           },
+          // The Vercel function pipeline drops the Content-Type our sitemap
+          // handlers set (works in dev, becomes text/html on Vercel). Force
+          // application/xml at the edge via routeRules so sitemaps render and
+          // validate correctly.
+          routeRules: {
+            "/sitemap.xml": {
+              headers: { "content-type": "application/xml; charset=utf-8" },
+            },
+            "/sitemap-core.xml": {
+              headers: { "content-type": "application/xml; charset=utf-8" },
+            },
+            "/sitemap-cities.xml": {
+              headers: { "content-type": "application/xml; charset=utf-8" },
+            },
+            "/sitemap-occasions-1.xml": {
+              headers: { "content-type": "application/xml; charset=utf-8" },
+            },
+            "/sitemap-occasions-2.xml": {
+              headers: { "content-type": "application/xml; charset=utf-8" },
+            },
+          },
         },
       }
     : {}),
