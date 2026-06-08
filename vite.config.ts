@@ -12,4 +12,22 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // The Lovable nitro plugin defaults to a Cloudflare target and skips itself
+  // entirely outside "Lovable context" (e.g. on Vercel) — which leaves no SSR
+  // function and makes every route 404. When building on Vercel, force-enable
+  // nitro with the Vercel preset so a serverless function + Build Output API
+  // routes are emitted. Outside Vercel we leave it untouched so Lovable's own
+  // build keeps using its Cloudflare default.
+  ...(process.env.VERCEL
+    ? {
+        nitro: {
+          preset: "vercel",
+          output: {
+            dir: ".vercel/output",
+            publicDir: ".vercel/output/static",
+            serverDir: ".vercel/output/functions/__server.func",
+          },
+        },
+      }
+    : {}),
 });
