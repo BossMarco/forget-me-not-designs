@@ -1,7 +1,7 @@
 // Single source of truth for site URL + business NAP (name/address/phone).
-// When the custom domain is live, change SITE_URL here and it propagates to every
-// canonical, OG tag, sitemap, robots.txt reference, and JSON-LD block.
-export const SITE_URL = "https://forget-me-not-designs.vercel.app";
+// Change SITE_URL here and it propagates to every canonical, OG tag, sitemap, and
+// JSON-LD block. Use the canonical host (apex 308-redirects to www).
+export const SITE_URL = "https://www.forgetmenotrgv.com";
 
 export interface BusinessHours {
   days: string; // schema.org dayOfWeek shorthand, e.g. "Mo-Fr"
