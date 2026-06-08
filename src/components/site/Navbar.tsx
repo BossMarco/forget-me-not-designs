@@ -30,16 +30,14 @@ export function Navbar() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:py-5">
-        <a href="#home" className="flex items-center gap-2">
-          <span className="grid h-9 w-9 place-items-center rounded-full bg-primary/10 text-primary font-serif text-xl italic">
-            f
-          </span>
-          <div className="leading-tight">
-            <div className="font-serif text-lg md:text-xl text-foreground">Forget Me Not</div>
-            <div className="text-[10px] tracking-[0.25em] uppercase text-muted-foreground">
-              Flowers &amp; Gifts
-            </div>
-          </div>
+        <a href="/" className="flex items-center" aria-label="Forget Me Not Flowers & Gifts — home">
+          <img
+            src="/logo.png"
+            alt="Forget Me Not Flowers & Gifts"
+            className="h-14 w-auto md:h-16"
+            width={600}
+            height={446}
+          />
         </a>
 
         <nav className="hidden md:flex items-center gap-8">

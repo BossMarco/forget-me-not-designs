@@ -9,19 +9,13 @@ export function Footer() {
       {/* Link columns — sitewide discoverability for the programmatic hubs */}
       <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-6 py-14 sm:grid-cols-3 lg:grid-cols-4">
         <div className="col-span-2 sm:col-span-1">
-          <div className="flex items-center gap-3">
-            <span className="grid h-9 w-9 place-items-center rounded-full bg-primary/10 text-primary font-serif text-xl italic">
-              f
-            </span>
-            <div className="leading-tight">
-              <div className="font-serif text-base text-foreground">
-                Forget Me Not Flowers &amp; Gifts
-              </div>
-              <div className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
-                by {BUSINESS.owner}
-              </div>
-            </div>
-          </div>
+          <img
+            src="/logo.png"
+            alt="Forget Me Not Flowers & Gifts by Mariela"
+            className="h-20 w-auto"
+            width={600}
+            height={446}
+          />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
             Hand-arranged flowers & same-day delivery across the {BUSINESS.region}.
           </p>
