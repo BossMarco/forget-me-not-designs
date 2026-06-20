@@ -17,7 +17,9 @@ Raymondville, + ~28 smaller towns).
 ---
 
 ## 1. Core commercial — highest value (per city)
+
 English:
+
 - florist {city}
 - flower shop {city}
 - flower delivery {city}
@@ -25,6 +27,7 @@ English:
 - flower shop near me / florist near me / flower delivery near me
 
 Spanish:
+
 - floreria {city}
 - floreria en {city}
 - envio de flores {city}
@@ -32,7 +35,9 @@ Spanish:
 - floreria cerca de mi
 
 ## 2. Everyday occasions — the bread & butter (per city)
+
 English:
+
 - birthday flowers {city}
 - anniversary flowers {city}
 - funeral flowers {city}
@@ -43,6 +48,7 @@ English:
 - just because flowers {city}
 
 Spanish:
+
 - flores para cumpleaños {city}
 - flores para aniversario {city}
 - flores para funeral {city}
@@ -51,7 +57,9 @@ Spanish:
 - arreglos florales {city}
 
 ## 3. Big-ticket events (per city)
+
 English:
+
 - wedding florist {city}
 - wedding flowers {city}
 - quinceanera flowers {city}
@@ -60,6 +68,7 @@ English:
 - gender reveal flowers {city}
 
 Spanish:
+
 - flores para boda {city}
 - flores para quinceañera {city}
 - centros de mesa {city}
@@ -67,11 +76,14 @@ Spanish:
 - flores para graduacion {city}
 
 ## 4. Seasonal (per city + region) — go big near the date
+
 - valentines day flowers {city} / flores para san valentin {city}
 - mothers day flowers {city} / flores para el dia de las madres {city}
 
 ## 5. Region / Valley-wide
+
 English:
+
 - florist rgv
 - florist rio grande valley
 - flower delivery rgv
@@ -83,6 +95,7 @@ English:
 - funeral flowers rgv
 
 Spanish:
+
 - floreria rgv
 - floreria valle de texas
 - envio de flores rgv
@@ -93,6 +106,7 @@ Spanish:
 - arreglos florales rgv
 
 ## 6. Brand
+
 - forget me not flowers
 - forget me not flowers and gifts
 - forget me not flowers mcallen
@@ -102,12 +116,14 @@ Spanish:
 ---
 
 ## How each keyword maps to a page
+
 - `florist/flower shop/flower delivery {city}` → city hub `/flower-delivery/{city}`
 - `{occasion} flowers {city}` → matrix page `/flower-delivery/{city}/{occasion}`
 - `{occasion} flowers rgv` → occasion hub `/occasions/{occasion}`
 - Brand terms → homepage `/`
 
 ## Priority order for ranking effort
+
 1. Claim + optimize Google Business Profile (unlocks the map pack — biggest lever).
 2. Brand terms (easiest wins; should rank in days–weeks once indexed).
 3. Tier-1 city core terms (McAllen/Pharr/Edinburg/etc. florist + flower delivery).

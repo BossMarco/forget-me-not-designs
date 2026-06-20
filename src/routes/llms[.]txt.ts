@@ -60,9 +60,7 @@ export const Route = createFileRoute("/llms.txt")({
         }
 
         L.push("## Contact");
-        L.push(
-          `- Phone: ${BUSINESS.phonePrimaryDisplay} (or ${BUSINESS.phoneSecondaryDisplay})`,
-        );
+        L.push(`- Phone: ${BUSINESS.phonePrimaryDisplay} (or ${BUSINESS.phoneSecondaryDisplay})`);
         L.push("- Hours: Mon–Fri 9am–6pm, Sat 9am–3pm, Sun 9am–5pm (CST)");
         L.push(
           `- Same-day delivery before ${BUSINESS.sameDayCutoff} across most of the ${BUSINESS.region}.`,

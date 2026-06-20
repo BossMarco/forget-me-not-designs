@@ -128,9 +128,7 @@ function BlogPostPage() {
         <h1 className="mt-4 font-serif text-4xl leading-tight text-foreground sm:text-5xl">
           {post.h1}
         </h1>
-        <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-          {post.excerpt}
-        </p>
+        <p className="mt-5 text-lg leading-relaxed text-muted-foreground">{post.excerpt}</p>
         <p className="mt-3 text-xs text-muted-foreground">
           <a href={altUrl} className="text-primary hover:underline">
             {post.lang === "es" ? "Read in English" : "Leer en español"}
@@ -139,25 +137,18 @@ function BlogPostPage() {
       </header>
 
       <article className="mx-auto max-w-3xl px-6 py-10">
-        <div
-          className="blog-prose"
-          dangerouslySetInnerHTML={{ __html: post.bodyHtml }}
-        />
+        <div className="blog-prose" dangerouslySetInnerHTML={{ __html: post.bodyHtml }} />
       </article>
 
       <LocalFaq
         faqs={post.faqs}
-        heading={
-          post.lang === "es" ? "Preguntas Frecuentes" : "Frequently Asked Questions"
-        }
+        heading={post.lang === "es" ? "Preguntas Frecuentes" : "Frequently Asked Questions"}
       />
 
       <section className="bg-secondary/40 py-16">
         <div className="mx-auto max-w-3xl px-6">
           <h2 className="font-serif text-3xl text-foreground sm:text-4xl">
-            {post.lang === "es"
-              ? "¿Lista para pedir? Escríbenos."
-              : "Ready to order? Reach out."}
+            {post.lang === "es" ? "¿Lista para pedir? Escríbenos." : "Ready to order? Reach out."}
           </h2>
           <p className="mt-4 text-muted-foreground">
             {post.lang === "es"
@@ -169,9 +160,7 @@ function BlogPostPage() {
               defaultOccasion={post.lang === "es" ? "Cumpleaños" : "Birthday"}
               source={`blog:${post.slug}`}
               heading={
-                post.lang === "es"
-                  ? "Pide tus flores de cumpleaños"
-                  : "Request birthday flowers"
+                post.lang === "es" ? "Pide tus flores de cumpleaños" : "Request birthday flowers"
               }
             />
           </div>

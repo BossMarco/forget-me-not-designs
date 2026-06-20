@@ -41,9 +41,7 @@ function BlogIndexPage() {
     <div className="min-h-screen bg-background">
       <Navbar />
       <main className="mx-auto max-w-7xl px-6 pt-24 pb-24">
-        <p className="mb-3 text-xs uppercase tracking-[0.3em] text-primary">
-          {BUSINESS.region}
-        </p>
+        <p className="mb-3 text-xs uppercase tracking-[0.3em] text-primary">{BUSINESS.region}</p>
         <h1 className="font-serif text-4xl text-foreground sm:text-5xl">
           Flower Tips &amp; Inspiration
         </h1>
@@ -69,10 +67,7 @@ function BlogIndexPage() {
                 {post.excerpt}
               </p>
               <div className="mt-5 flex items-center justify-between">
-                <time
-                  dateTime={post.publishDate}
-                  className="text-xs text-muted-foreground"
-                >
+                <time dateTime={post.publishDate} className="text-xs text-muted-foreground">
                   {new Date(post.publishDate + "T12:00:00").toLocaleDateString(
                     post.lang === "es" ? "es-MX" : "en-US",
                     { year: "numeric", month: "long", day: "numeric" },

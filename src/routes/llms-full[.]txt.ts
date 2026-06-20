@@ -44,7 +44,12 @@ export const Route = createFileRoute("/llms-full.txt")({
           L.push(`## ${o.label} (${o.phrase})`);
           L.push(`Hub: ${SITE_URL}/occasions/${o.slug}`);
           L.push(interpolate(o.introVariants[0], { city: region }));
-          L.push(list("What we offer", o.whatWeOffer.map((w) => interpolate(w, { city: region }))));
+          L.push(
+            list(
+              "What we offer",
+              o.whatWeOffer.map((w) => interpolate(w, { city: region })),
+            ),
+          );
           L.push("FAQs:");
           for (const f of o.faqs) {
             L.push(`- Q: ${interpolate(f.q, { city: region })}`);
