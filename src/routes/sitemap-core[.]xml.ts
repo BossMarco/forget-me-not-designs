@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { CATEGORIES } from "@/data/products";
+import { POSTS } from "@/data/posts";
 import { urlsetResponse, type SitemapEntry } from "@/lib/sitemap";
 
 // Core static pages: home, shop + categories, and the two programmatic hubs.
@@ -16,6 +17,12 @@ export const Route = createFileRoute("/sitemap-core.xml")({
           ...CATEGORIES.map((c) => ({
             path: `/shop/${c.slug}`,
             changefreq: "weekly" as const,
+            priority: "0.7",
+          })),
+          { path: "/blog", changefreq: "weekly", priority: "0.8" },
+          ...POSTS.map((p) => ({
+            path: `/blog/${p.slug}`,
+            changefreq: "monthly" as const,
             priority: "0.7",
           })),
         ];

@@ -21,9 +21,11 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ShopIndexRouteImport } from './routes/shop.index'
 import { Route as OccasionsIndexRouteImport } from './routes/occasions.index'
 import { Route as FlowerDeliveryIndexRouteImport } from './routes/flower-delivery.index'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as ShopCategoryRouteImport } from './routes/shop.$category'
 import { Route as OccasionsOccasionRouteImport } from './routes/occasions.$occasion'
 import { Route as FlowerDeliveryCityRouteImport } from './routes/flower-delivery.$city'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as ApiLeadRouteImport } from './routes/api.lead'
 import { Route as FlowerDeliveryCityIndexRouteImport } from './routes/flower-delivery.$city.index'
 import { Route as FlowerDeliveryCityOccasionRouteImport } from './routes/flower-delivery.$city.$occasion'
@@ -88,6 +90,11 @@ const FlowerDeliveryIndexRoute = FlowerDeliveryIndexRouteImport.update({
   path: '/flower-delivery/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ShopCategoryRoute = ShopCategoryRouteImport.update({
   id: '/$category',
   path: '/$category',
@@ -101,6 +108,11 @@ const OccasionsOccasionRoute = OccasionsOccasionRouteImport.update({
 const FlowerDeliveryCityRoute = FlowerDeliveryCityRouteImport.update({
   id: '/flower-delivery/$city',
   path: '/flower-delivery/$city',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiLeadRoute = ApiLeadRouteImport.update({
@@ -131,9 +143,11 @@ export interface FileRoutesByFullPath {
   '/sitemap-occasions-2.xml': typeof SitemapOccasions2DotxmlRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/api/lead': typeof ApiLeadRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/flower-delivery/$city': typeof FlowerDeliveryCityRouteWithChildren
   '/occasions/$occasion': typeof OccasionsOccasionRoute
   '/shop/$category': typeof ShopCategoryRoute
+  '/blog/': typeof BlogIndexRoute
   '/flower-delivery/': typeof FlowerDeliveryIndexRoute
   '/occasions/': typeof OccasionsIndexRoute
   '/shop/': typeof ShopIndexRoute
@@ -150,8 +164,10 @@ export interface FileRoutesByTo {
   '/sitemap-occasions-2.xml': typeof SitemapOccasions2DotxmlRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/api/lead': typeof ApiLeadRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/occasions/$occasion': typeof OccasionsOccasionRoute
   '/shop/$category': typeof ShopCategoryRoute
+  '/blog': typeof BlogIndexRoute
   '/flower-delivery': typeof FlowerDeliveryIndexRoute
   '/occasions': typeof OccasionsIndexRoute
   '/shop': typeof ShopIndexRoute
@@ -170,9 +186,11 @@ export interface FileRoutesById {
   '/sitemap-occasions-2.xml': typeof SitemapOccasions2DotxmlRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/api/lead': typeof ApiLeadRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/flower-delivery/$city': typeof FlowerDeliveryCityRouteWithChildren
   '/occasions/$occasion': typeof OccasionsOccasionRoute
   '/shop/$category': typeof ShopCategoryRoute
+  '/blog/': typeof BlogIndexRoute
   '/flower-delivery/': typeof FlowerDeliveryIndexRoute
   '/occasions/': typeof OccasionsIndexRoute
   '/shop/': typeof ShopIndexRoute
@@ -192,9 +210,11 @@ export interface FileRouteTypes {
     | '/sitemap-occasions-2.xml'
     | '/sitemap.xml'
     | '/api/lead'
+    | '/blog/$slug'
     | '/flower-delivery/$city'
     | '/occasions/$occasion'
     | '/shop/$category'
+    | '/blog/'
     | '/flower-delivery/'
     | '/occasions/'
     | '/shop/'
@@ -211,8 +231,10 @@ export interface FileRouteTypes {
     | '/sitemap-occasions-2.xml'
     | '/sitemap.xml'
     | '/api/lead'
+    | '/blog/$slug'
     | '/occasions/$occasion'
     | '/shop/$category'
+    | '/blog'
     | '/flower-delivery'
     | '/occasions'
     | '/shop'
@@ -230,9 +252,11 @@ export interface FileRouteTypes {
     | '/sitemap-occasions-2.xml'
     | '/sitemap.xml'
     | '/api/lead'
+    | '/blog/$slug'
     | '/flower-delivery/$city'
     | '/occasions/$occasion'
     | '/shop/$category'
+    | '/blog/'
     | '/flower-delivery/'
     | '/occasions/'
     | '/shop/'
@@ -251,8 +275,10 @@ export interface RootRouteChildren {
   SitemapOccasions2DotxmlRoute: typeof SitemapOccasions2DotxmlRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   ApiLeadRoute: typeof ApiLeadRoute
+  BlogSlugRoute: typeof BlogSlugRoute
   FlowerDeliveryCityRoute: typeof FlowerDeliveryCityRouteWithChildren
   OccasionsOccasionRoute: typeof OccasionsOccasionRoute
+  BlogIndexRoute: typeof BlogIndexRoute
   FlowerDeliveryIndexRoute: typeof FlowerDeliveryIndexRoute
   OccasionsIndexRoute: typeof OccasionsIndexRoute
 }
@@ -343,6 +369,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FlowerDeliveryIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/shop/$category': {
       id: '/shop/$category'
       path: '/$category'
@@ -362,6 +395,13 @@ declare module '@tanstack/react-router' {
       path: '/flower-delivery/$city'
       fullPath: '/flower-delivery/$city'
       preLoaderRoute: typeof FlowerDeliveryCityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/lead': {
@@ -424,8 +464,10 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapOccasions2DotxmlRoute: SitemapOccasions2DotxmlRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   ApiLeadRoute: ApiLeadRoute,
+  BlogSlugRoute: BlogSlugRoute,
   FlowerDeliveryCityRoute: FlowerDeliveryCityRouteWithChildren,
   OccasionsOccasionRoute: OccasionsOccasionRoute,
+  BlogIndexRoute: BlogIndexRoute,
   FlowerDeliveryIndexRoute: FlowerDeliveryIndexRoute,
   OccasionsIndexRoute: OccasionsIndexRoute,
 }

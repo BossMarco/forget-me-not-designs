@@ -8,6 +8,7 @@ const links = [
   { href: "/flower-delivery", label: "Flower Delivery" },
   { href: "/occasions", label: "Occasions" },
   { href: "/shop", label: "Shop" },
+  { href: "/blog", label: "Blog" },
   { href: "/#about", label: "About" },
   { href: "/#contact", label: "Contact" },
 ];
