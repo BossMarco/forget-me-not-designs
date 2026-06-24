@@ -31,6 +31,8 @@ export interface City {
   introHook: string;
   /** 1 = flagship, 2 = secondary, 3 = long-tail small town */
   tier: 1 | 2 | 3;
+  /** override the city hub <title> tag for flagship cities targeting head terms */
+  seoTitle?: string;
 }
 
 export const CITIES: City[] = [
@@ -373,6 +375,7 @@ export const CITIES: City[] = [
     introHook:
       "As the commercial heart of the Valley, McAllen pairs La Plaza Mall and a buzzing convention district with leafy neighborhoods like North McAllen and Nolana.",
     tier: 1,
+    seoTitle: "McAllen Flower Shop & Florist | Same-Day Delivery | Forget Me Not",
   },
   {
     slug: "edinburg",

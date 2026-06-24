@@ -157,11 +157,9 @@ function BlogPostPage() {
           </p>
           <div className="mt-8">
             <LeadForm
-              defaultOccasion={post.lang === "es" ? "Cumpleaños" : "Birthday"}
+              defaultOccasion={post.categoryLabel}
               source={`blog:${post.slug}`}
-              heading={
-                post.lang === "es" ? "Pide tus flores de cumpleaños" : "Request birthday flowers"
-              }
+              heading={post.lang === "es" ? "Pide tus flores" : "Request flowers"}
             />
           </div>
         </div>

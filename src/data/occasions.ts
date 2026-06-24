@@ -685,6 +685,52 @@ export const OCCASIONS: Occasion[] = [
     tier: 2,
   },
   {
+    slug: "bridal-shower",
+    label: "Bridal Shower",
+    plural: "Bridal Showers",
+    phrase: "bridal shower flowers",
+    h1Template: "Bridal Shower Flowers in {city}, TX",
+    hubH1: "Bridal Shower Flowers Across the RGV",
+    metaTitleTemplate: "Bridal Shower Flowers in {city}, TX | Arrangements & Centerpieces",
+    metaDescTemplate:
+      "Bridal shower flowers in {city}, TX. Centerpieces, bouquets & décor hand-arranged by Forget Me Not. Same-day delivery or pre-scheduled. Call {phone}.",
+    introVariants: [
+      "Celebrate the bride-to-be in {city} with fresh, feminine florals from Forget Me Not Flowers. We design bridal shower centerpieces, table arrangements, guest-of-honor bouquets, and welcome displays — delivered and styled throughout {city}, TX.",
+      "Planning a bridal shower in {city}? Forget Me Not creates cohesive floral packages — table centerpieces, a bride's bouquet, and accent pieces — in your chosen palette and delivered ready to display at your {city} venue.",
+      "Forget Me Not Flowers makes {city} bridal showers bloom. From an intimate backyard brunch to a ballroom party, Mariela designs bridal shower florals to match your theme, colors, and guest count.",
+    ],
+    whatWeOffer: [
+      "Table centerpieces for every guest count",
+      "Bride's honorary bouquet",
+      "Welcome & entry arrangements",
+      "Themed color palettes & styles",
+      "Delivery & setup in {city}",
+    ],
+    localFocus: "venues",
+    localHeading: "Bridal shower venues near {city}",
+    productCategories: ["everyday", "romance", "congratulations"],
+    faqs: [
+      {
+        q: "Can you do bridal shower flowers for a small gathering in {city}?",
+        a: "Absolutely — we design for intimate showers of any size in {city}, TX, from a few centerpieces to full venue florals.",
+      },
+      {
+        q: "How far in advance should I order bridal shower flowers?",
+        a: "We recommend at least a week ahead for {city} bridal showers to source specialty blooms; last-minute same-day orders are possible for simpler arrangements.",
+      },
+      {
+        q: "Can you match a specific color palette?",
+        a: "Yes — share your colors and we'll hand-select blooms to match for your {city} bridal shower.",
+      },
+      {
+        q: "Do you set up the florals at the venue?",
+        a: "We can deliver and arrange florals at your {city}-area venue so everything is in place before guests arrive.",
+      },
+    ],
+    schemaType: "Service",
+    tier: 1,
+  },
+  {
     slug: "romance",
     label: "Romance & Roses",
     plural: "Romance & Roses",
