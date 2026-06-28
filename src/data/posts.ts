@@ -2,6 +2,15 @@
 // bodyHtml is rendered via dangerouslySetInnerHTML inside the .blog-prose wrapper.
 // faqs are rendered by LocalFaq (accordion) AND wired to FAQPage schema.
 
+import { batch01 } from "./posts-batches/batch-01";
+import { batch02 } from "./posts-batches/batch-02";
+import { batch03 } from "./posts-batches/batch-03";
+import { batch04 } from "./posts-batches/batch-04";
+import { batch05 } from "./posts-batches/batch-05";
+import { batch06 } from "./posts-batches/batch-06";
+import { batch07 } from "./posts-batches/batch-07";
+import { batch10 } from "./posts-batches/batch-10";
+
 export interface PostFaq {
   q: string;
   a: string;
@@ -24,7 +33,7 @@ export interface BlogPost {
   heroImage?: string; // optional per-post hero/featured image; falls back to /og.png
 }
 
-export const POSTS: BlogPost[] = [
+const BASE_POSTS: BlogPost[] = [
   // ─── English: Birthday Flowers ─────────────────────────────────────────────
   {
     slug: "birthday-flowers-rgv",
@@ -1365,6 +1374,18 @@ export const POSTS: BlogPost[] = [
       "florista Valle de Texas",
     ],
   },
+];
+
+export const POSTS: BlogPost[] = [
+  ...BASE_POSTS,
+  ...batch01,
+  ...batch02,
+  ...batch03,
+  ...batch04,
+  ...batch05,
+  ...batch06,
+  ...batch07,
+  ...batch10,
 ];
 
 export function getPost(slug: string): BlogPost | undefined {
