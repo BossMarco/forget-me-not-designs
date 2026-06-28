@@ -26,10 +26,8 @@ export const Route = createFileRoute("/flower-delivery/$city/")({
   head: ({ loaderData }) => {
     if (!loaderData) return {};
     const { city, indexable, canonicalSlug } = loaderData;
-    const title =
-      city.seoTitle ??
-      `Flower Delivery in ${city.name}, TX | Same-Day Florist | ${BUSINESS.shortName}`;
-    const desc = `Same-day flower delivery in ${city.name}, TX. Weddings, quinceañeras, birthdays, sympathy & more, hand-arranged by ${BUSINESS.owner}. Call ${BUSINESS.phonePrimaryDisplay}.`;
+    const title = city.seoTitle ?? `${city.name} Flower Delivery, TX | Same-Day Florist`;
+    const desc = `Same-day flower delivery in ${city.name}, TX before ${BUSINESS.sameDayCutoff}. Weddings, quinceañeras, birthdays & sympathy, hand-arranged by ${BUSINESS.owner}. Call ${BUSINESS.phonePrimaryDisplay}.`;
     const url = `${SITE_URL}/flower-delivery/${city.slug}`;
     const canonical = `${SITE_URL}/flower-delivery/${canonicalSlug}`;
 

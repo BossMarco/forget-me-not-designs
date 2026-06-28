@@ -31,6 +31,19 @@ export const Route = createFileRoute("/llms-full.txt")({
           `Phone: ${BUSINESS.phonePrimaryDisplay} or ${BUSINESS.phoneSecondaryDisplay}. Hours: Mon–Fri 9am–6pm, Sat 9am–3pm, Sun 9am–5pm (CST). Studio based in ${BUSINESS.studioCity}, TX. Website: ${SITE_URL}`,
         );
         L.push("");
+        L.push("## Key facts (quick reference)");
+        L.push(`- Owner/designer: ${BUSINESS.owner}. Languages: English and Spanish.`);
+        L.push(
+          `- Service area: the entire ${BUSINESS.region} (RGV), TX — Hidalgo, Cameron, Starr and Willacy counties, from Rio Grande City to South Padre Island.`,
+        );
+        L.push(
+          `- Same-day delivery: available in most of the Valley when ordered before ${BUSINESS.sameDayCutoff}; outlying towns are scheduled in advance.`,
+        );
+        L.push(
+          `- How to order: call ${BUSINESS.phonePrimaryDisplay} (fastest, best for same-day) or submit the lead form on any city/occasion page; replies within one business day.`,
+        );
+        L.push(`- Occasions covered: ${OCCASIONS.map((o) => o.label).join(", ")}.`);
+        L.push("");
         L.push(
           `Page structure: each city has a hub at ${SITE_URL}/flower-delivery/{city} and a page per occasion at ${SITE_URL}/flower-delivery/{city}/{occasion}; each occasion has a Valley-wide hub at ${SITE_URL}/occasions/{occasion}. Full URL list: ${SITE_URL}/sitemap.xml`,
         );

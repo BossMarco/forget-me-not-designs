@@ -11,7 +11,8 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
-import { SITE_URL } from "../lib/site";
+import { SITE_URL, BUSINESS } from "../lib/site";
+import { ld } from "../lib/schema";
 
 function NotFoundComponent() {
   return (
@@ -110,6 +111,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "icon", href: "/favicon.ico", sizes: "any" },
       { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32.png" },
       { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+      // Surface the AI/LLM content maps to crawlers that look for them.
+      { rel: "alternate", type: "text/plain", href: `${SITE_URL}/llms.txt`, title: "llms.txt" },
+    ],
+    scripts: [
+      // Site-wide WebSite node. Distinct @type from the Florist node so it never
+      // collides with the LocalBusiness schema emitted on city pages.
+      ld({
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": `${SITE_URL}/#website`,
+        name: BUSINESS.name,
+        url: SITE_URL,
+        inLanguage: "en-US",
+        publisher: { "@id": `${SITE_URL}/#florist` },
+      }),
     ],
   }),
   shellComponent: RootShell,

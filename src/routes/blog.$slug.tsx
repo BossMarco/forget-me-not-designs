@@ -23,6 +23,7 @@ export const Route = createFileRoute("/blog/$slug")({
     const url = `${SITE_URL}/blog/${post.slug}`;
     const altUrl = `${SITE_URL}/blog/${post.altSlug}`;
     const altLang = post.lang === "en" ? "es" : "en";
+    const imageUrl = `${SITE_URL}${post.heroImage ?? "/og.png"}`;
     return {
       meta: [
         { title: post.metaTitle },
@@ -31,7 +32,7 @@ export const Route = createFileRoute("/blog/$slug")({
         { property: "og:description", content: post.metaDescription },
         { property: "og:type", content: "article" },
         { property: "og:url", content: url },
-        { property: "og:image", content: `${SITE_URL}/og.png` },
+        { property: "og:image", content: imageUrl },
         { property: "article:published_time", content: post.publishDate },
       ],
       links: [
@@ -54,7 +55,7 @@ export const Route = createFileRoute("/blog/$slug")({
           headline: post.metaTitle,
           description: post.metaDescription,
           url,
-          image: `${SITE_URL}/og.png`,
+          image: imageUrl,
           datePublished: post.publishDate,
           dateModified: post.publishDate,
           inLanguage: post.lang,
@@ -114,6 +115,14 @@ function BlogPostPage() {
       />
 
       <header className="mx-auto max-w-3xl px-6 pt-6">
+        {post.heroImage && (
+          <img
+            src={post.heroImage}
+            alt={post.h1}
+            loading="eager"
+            className="mb-6 aspect-[16/9] w-full rounded-2xl object-cover"
+          />
+        )}
         <div className="flex items-center gap-3">
           <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
             {post.categoryLabel}

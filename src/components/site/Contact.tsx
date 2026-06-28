@@ -1,11 +1,12 @@
 import { Phone, MapPin, Clock, Instagram, Facebook } from "lucide-react";
 import { LeadForm } from "@/components/site/LeadForm";
+import { Reveal } from "@/components/site/Reveal";
 
 export function Contact() {
   return (
     <section id="contact" className="relative bg-secondary/40 py-24 sm:py-32">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 lg:grid-cols-12 lg:gap-16">
-        <div className="lg:col-span-5">
+        <Reveal as="div" y={16} className="lg:col-span-5">
           <p className="mb-4 text-xs uppercase tracking-[0.3em] text-primary">
             Let&rsquo;s Talk Flowers
           </p>
@@ -74,11 +75,11 @@ export function Contact() {
               </a>
             </div>
           </div>
-        </div>
+        </Reveal>
 
-        <div className="lg:col-span-7">
+        <Reveal as="div" delay={120} y={16} className="lg:col-span-7">
           <LeadForm source="home-contact" />
-        </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -32,7 +32,10 @@ export const Route = createFileRoute("/flower-delivery/$city/$occasion")({
     if (!loaderData) return {};
     const { city, occasion, indexable } = loaderData;
     const vars = { city: city.name };
-    const title = `${interpolate(occasion.metaTitleTemplate, vars)} | ${BUSINESS.shortName}`;
+    // The occasion metaTitleTemplate already carries a value-prop tail (e.g.
+    // "Bridal Bouquets & Centerpieces"), so we don't append the brand here —
+    // keeps the title closer to the ~60-char SERP cutoff.
+    const title = interpolate(occasion.metaTitleTemplate, vars);
     const desc = interpolate(occasion.metaDescTemplate, vars);
     const url = `${SITE_URL}/flower-delivery/${city.slug}/${occasion.slug}`;
 

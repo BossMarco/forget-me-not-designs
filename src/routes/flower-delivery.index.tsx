@@ -13,8 +13,8 @@ import { ld, buildBreadcrumb, buildFlorist } from "@/lib/schema";
 
 export const Route = createFileRoute("/flower-delivery/")({
   head: () => {
-    const title = `Flower Delivery Across the Rio Grande Valley | ${BUSINESS.shortName}`;
-    const desc = `Same-day flower delivery to ${INDEXABLE_CITIES.length}+ Rio Grande Valley cities — McAllen, Edinburg, Brownsville, Harlingen, South Padre Island & more. Call ${BUSINESS.phonePrimaryDisplay}.`;
+    const title = `Same-Day Flower Delivery in the RGV | ${BUSINESS.shortName}`;
+    const desc = `Same-day flower delivery to ${INDEXABLE_CITIES.length}+ Rio Grande Valley cities — McAllen, Edinburg, Brownsville, Harlingen & South Padre. Order before ${BUSINESS.sameDayCutoff}. Call ${BUSINESS.phonePrimaryDisplay}.`;
     const url = `${SITE_URL}/flower-delivery`;
     return {
       meta: [

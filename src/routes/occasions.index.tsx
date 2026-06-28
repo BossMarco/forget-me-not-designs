@@ -13,7 +13,7 @@ import { ld, buildBreadcrumb } from "@/lib/schema";
 export const Route = createFileRoute("/occasions/")({
   head: () => {
     const title = `Flowers for Every Occasion in the RGV | ${BUSINESS.shortName}`;
-    const desc = `Weddings, quinceañeras, proms, birthdays, sympathy, Mother's Day & more. Hand-arranged flowers delivered across the Rio Grande Valley. Call ${BUSINESS.phonePrimaryDisplay}.`;
+    const desc = `Weddings, quinceañeras, proms, birthdays, sympathy & Mother's Day. Hand-arranged flowers with same-day delivery across the Rio Grande Valley. Call ${BUSINESS.phonePrimaryDisplay}.`;
     const url = `${SITE_URL}/occasions`;
     return {
       meta: [

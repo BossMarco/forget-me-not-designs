@@ -53,33 +53,45 @@ function BlogIndexPage() {
           {POSTS.map((post) => (
             <article
               key={post.slug}
-              className="group flex flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition hover:shadow-md"
+              className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition hover:shadow-md"
             >
-              <span className="mb-3 inline-block self-start rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
-                {post.categoryLabel}
-              </span>
-              <h2 className="font-serif text-xl font-semibold leading-snug text-foreground transition-colors group-hover:text-primary">
-                <Link to="/blog/$slug" params={{ slug: post.slug }}>
-                  {post.h1}
+              {post.heroImage && (
+                <Link to="/blog/$slug" params={{ slug: post.slug }} className="block">
+                  <img
+                    src={post.heroImage}
+                    alt={post.h1}
+                    loading="lazy"
+                    className="aspect-[16/9] w-full object-cover"
+                  />
                 </Link>
-              </h2>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
-                {post.excerpt}
-              </p>
-              <div className="mt-5 flex items-center justify-between">
-                <time dateTime={post.publishDate} className="text-xs text-muted-foreground">
-                  {new Date(post.publishDate + "T12:00:00").toLocaleDateString(
-                    post.lang === "es" ? "es-MX" : "en-US",
-                    { year: "numeric", month: "long", day: "numeric" },
-                  )}
-                </time>
-                <Link
-                  to="/blog/$slug"
-                  params={{ slug: post.slug }}
-                  className="text-xs font-medium text-primary hover:underline"
-                >
-                  {post.lang === "es" ? "Leer más →" : "Read more →"}
-                </Link>
+              )}
+              <div className="flex flex-1 flex-col p-6">
+                <span className="mb-3 inline-block self-start rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+                  {post.categoryLabel}
+                </span>
+                <h2 className="font-serif text-xl font-semibold leading-snug text-foreground transition-colors group-hover:text-primary">
+                  <Link to="/blog/$slug" params={{ slug: post.slug }}>
+                    {post.h1}
+                  </Link>
+                </h2>
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
+                  {post.excerpt}
+                </p>
+                <div className="mt-5 flex items-center justify-between">
+                  <time dateTime={post.publishDate} className="text-xs text-muted-foreground">
+                    {new Date(post.publishDate + "T12:00:00").toLocaleDateString(
+                      post.lang === "es" ? "es-MX" : "en-US",
+                      { year: "numeric", month: "long", day: "numeric" },
+                    )}
+                  </time>
+                  <Link
+                    to="/blog/$slug"
+                    params={{ slug: post.slug }}
+                    className="text-xs font-medium text-primary hover:underline"
+                  >
+                    {post.lang === "es" ? "Leer más →" : "Read more →"}
+                  </Link>
+                </div>
               </div>
             </article>
           ))}

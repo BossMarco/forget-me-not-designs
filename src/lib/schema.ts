@@ -1,10 +1,14 @@
-import { SITE_URL, BUSINESS } from "./site";
+import { SITE_URL, BUSINESS, ogImage } from "./site";
 import type { City } from "@/data/cities";
+import { TIER1_CITIES } from "@/data/cities";
 import type { Occasion, OccasionFaq } from "@/data/occasions";
 import { interpolate } from "./local-content";
 
 // Pure JSON-LD builders. Each returns a plain object that a route's head() passes
 // to { type: "application/ld+json", children: JSON.stringify(...) }.
+
+// Stable @id for the business node so every page references the same entity.
+const FLORIST_ID = `${SITE_URL}/#florist`;
 
 function openingHoursSpecification() {
   return BUSINESS.hours.map((h) => ({
@@ -51,6 +55,9 @@ export function buildBreadcrumb(items: { name: string; path: string }[]) {
 /** Florist / LocalBusiness, optionally scoped to a city via areaServed. */
 export function buildFlorist(opts?: { city?: City; url?: string }) {
   const city = opts?.city;
+
+  // When scoped to a city, areaServed is that city; otherwise enumerate the
+  // region plus our flagship RGV cities so AI/local engines see explicit coverage.
   const areaServed = city
     ? {
         "@type": "City",
@@ -60,20 +67,45 @@ export function buildFlorist(opts?: { city?: City; url?: string }) {
           name: `${city.county} County`,
         },
       }
-    : BUSINESS.region;
+    : [
+        { "@type": "AdministrativeArea", name: `${BUSINESS.region}, TX` },
+        ...TIER1_CITIES.map((c) => ({
+          "@type": "City" as const,
+          name: `${c.name}, TX`,
+        })),
+      ];
 
   return {
     "@context": "https://schema.org",
     "@type": "Florist",
+    "@id": FLORIST_ID,
     name: BUSINESS.name,
     description: `Local florist by ${BUSINESS.owner} serving ${
       city ? `${city.name}, TX and ` : ""
     }the ${BUSINESS.region}. Same-day flower delivery for weddings, quinceañeras, birthdays, sympathy and more.`,
     telephone: BUSINESS.phonePrimary,
     url: opts?.url ?? SITE_URL,
-    image: `${SITE_URL}/og.png`,
+    image: [ogImage, `${SITE_URL}/og.png`],
+    logo: `${SITE_URL}/og.png`,
     priceRange: "$$",
+    currenciesAccepted: "USD",
     areaServed,
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: BUSINESS.phonePrimary,
+        contactType: "sales",
+        areaServed: "US",
+        availableLanguage: ["English", "Spanish"],
+      },
+      {
+        "@type": "ContactPoint",
+        telephone: BUSINESS.phoneSecondary,
+        contactType: "customer service",
+        areaServed: "US",
+        availableLanguage: ["English", "Spanish"],
+      },
+    ],
     address: {
       "@type": "PostalAddress",
       addressLocality: BUSINESS.studioCity,
@@ -81,6 +113,8 @@ export function buildFlorist(opts?: { city?: City; url?: string }) {
       addressCountry: "US",
     },
     openingHoursSpecification: openingHoursSpecification(),
+    // geo intentionally omitted: no verified street-level lat/long for the
+    // Pharr studio. sameAs intentionally omitted: no real profile URLs in site.ts.
   };
 }
 
@@ -97,6 +131,7 @@ export function buildService(opts: { occasion: Occasion; city?: City; url: strin
     areaServed: city ? { "@type": "City", name: cityName } : BUSINESS.region,
     provider: {
       "@type": "Florist",
+      "@id": FLORIST_ID,
       name: BUSINESS.name,
       telephone: BUSINESS.phonePrimary,
       url: SITE_URL,
@@ -108,6 +143,12 @@ export function buildFaqPage(faqs: OccasionFaq[], vars: { city?: string }) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    // Speakable marks the Q&A as voice/AI-answer friendly for assistants that
+    // read or quote concise answers aloud.
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h2", "[data-radix-accordion-trigger]", "[data-radix-accordion-content]"],
+    },
     mainEntity: faqs.map((f) => ({
       "@type": "Question",
       name: interpolate(f.q, vars),

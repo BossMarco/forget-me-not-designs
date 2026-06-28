@@ -1,4 +1,5 @@
 import { PRODUCTS } from "@/data/products";
+import { Reveal } from "@/components/site/Reveal";
 
 // Curated mix for a balanced masonry layout
 const GALLERY_SLUGS = [
@@ -21,7 +22,10 @@ export function Gallery() {
   return (
     <section id="gallery" className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+        <Reveal
+          as="div"
+          className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end"
+        >
           <div className="max-w-xl">
             <p className="mb-4 text-xs uppercase tracking-[0.3em] text-primary">The Portfolio</p>
             <h2 className="font-serif text-4xl text-foreground sm:text-5xl">
@@ -31,12 +35,14 @@ export function Gallery() {
           <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
             Real arrangements from the studio &mdash; a small selection of recent work.
           </p>
-        </div>
+        </Reveal>
 
         <div className="mt-12 grid auto-rows-[220px] grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 md:auto-rows-[260px]">
-          {items.map((it) => (
-            <a
+          {items.map((it, i) => (
+            <Reveal
               key={it.slug}
+              as="a"
+              delay={(i % 3) * 90}
               href={it.url}
               target="_blank"
               rel="noopener noreferrer"
@@ -53,7 +59,7 @@ export function Gallery() {
                 <div className="font-serif text-lg leading-tight">{it.name}</div>
                 <div className="mt-1 text-xs uppercase tracking-widest opacity-90">{it.price}</div>
               </figcaption>
-            </a>
+            </Reveal>
           ))}
         </div>
       </div>

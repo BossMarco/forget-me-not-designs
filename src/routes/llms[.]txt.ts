@@ -59,6 +59,30 @@ export const Route = createFileRoute("/llms.txt")({
           L.push("");
         }
 
+        L.push("## Key facts");
+        L.push(`- Business: ${BUSINESS.name} (florist), owned and designed by ${BUSINESS.owner}.`);
+        L.push(`- Location: ${BUSINESS.studioCity}, ${BUSINESS.state} (studio).`);
+        L.push(
+          `- Service area: the entire ${BUSINESS.region} (RGV), Texas — ${INDEXABLE_CITIES.length}+ cities/towns across Hidalgo, Cameron, Starr & Willacy counties, from Rio Grande City to South Padre Island.`,
+        );
+        L.push(
+          `- Same-day delivery: available in most of the Valley when ordered before ${BUSINESS.sameDayCutoff}.`,
+        );
+        L.push(
+          `- Occasions: weddings, quinceañeras, proms, birthdays, baby showers, gender reveals, anniversaries, sympathy & funeral, get well, congratulations, Mother's Day and Valentine's Day.`,
+        );
+        L.push(`- Languages: English and Spanish.`);
+        L.push("");
+
+        L.push("## How to order");
+        L.push(
+          `- Call ${BUSINESS.phonePrimaryDisplay} (fastest, best for same-day) or ${BUSINESS.phoneSecondaryDisplay}.`,
+        );
+        L.push(
+          `- Or submit the lead form on any ${SITE_URL}/flower-delivery/{city} or ${SITE_URL}/occasions/{occasion} page; replies within one business day.`,
+        );
+        L.push("");
+
         L.push("## Contact");
         L.push(`- Phone: ${BUSINESS.phonePrimaryDisplay} (or ${BUSINESS.phoneSecondaryDisplay})`);
         L.push("- Hours: Mon–Fri 9am–6pm, Sat 9am–3pm, Sun 9am–5pm (CST)");

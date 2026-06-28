@@ -116,6 +116,37 @@
   animation: fade-up 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
 
+/* ── Scroll reveal (paired with src/components/site/Reveal.tsx) ──────────────
+   The component only adds .reveal AFTER client mount when motion is allowed,
+   so server HTML stays visible. We just supply the smooth transition here. */
+.reveal {
+  transition:
+    transform 0.62s cubic-bezier(0.2, 0.8, 0.2, 1),
+    opacity 0.62s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: transform, opacity;
+}
+
+/* ── Reduced-motion: disable non-essential motion site-wide ──────────────────
+   Belt-and-suspenders — Reveal.tsx already opts out in JS, but this also
+   neutralizes hover lifts, image zooms, and entrance animations. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 /* ── Blog post prose ─────────────────────────────────────────────────────── */
 .blog-prose h2 {
   font-family: var(--font-serif);

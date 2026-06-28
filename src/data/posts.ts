@@ -21,6 +21,7 @@ export interface BlogPost {
   bodyHtml: string;
   faqs: PostFaq[];
   tags: string[];
+  heroImage?: string; // optional per-post hero/featured image; falls back to /og.png
 }
 
 export const POSTS: BlogPost[] = [
@@ -810,6 +811,558 @@ export const POSTS: BlogPost[] = [
       "flores condolencia McAllen",
       "funeraria McAllen entrega",
       "florista RGV",
+    ],
+  },
+  // ── Wedding Flowers McAllen (EN) ────────────────────────────────────────────
+  {
+    slug: "wedding-flowers-mcallen-guide",
+    lang: "en",
+    altSlug: "flores-para-boda-mcallen-guia",
+    metaTitle: "Wedding Flowers McAllen — Local Florist Guide | Forget Me Not",
+    metaDescription:
+      "Wedding flowers in McAllen done right: bouquets, arches & centerpieces from a local studio. Same-day fresh, hand-arranged. Call Forget Me Not: (956) 313-1847.",
+    h1: "Wedding Flowers in McAllen: A Local Bride's Planning Guide",
+    publishDate: "2026-06-22",
+    category: "weddings",
+    categoryLabel: "Weddings",
+    excerpt:
+      "Everything a McAllen couple needs to plan their wedding flowers — bouquets, ceremony arches, centerpieces, seasonal RGV blooms, and why a local studio beats a wire service.",
+    heroImage: "/og.png",
+    bodyHtml: `<p>Planning <strong>wedding flowers in McAllen</strong> is one of the most personal decisions you'll make for your big day — and one of the most photographed. From the bouquet you carry down the aisle at Our Lady of Sorrows to the centerpieces glowing on every table at the McAllen Convention Center, flowers set the entire mood. At <strong>Forget Me Not Flowers &amp; Gifts</strong> in Pharr, just minutes from McAllen, Mariela hand-arranges every piece in our local studio and delivers it fresh the morning of your wedding. This guide walks you through everything a McAllen couple needs to know.</p>
+
+<p>Ready to start now? Visit our dedicated <a href="/flower-delivery/mcallen/weddings">McAllen wedding flower delivery</a> page or call <a href="tel:+19563131847">(956) 313-1847</a> for a free consultation.</p>
+
+<h2>Why Choose a Local McAllen Florist Over a Wire Service?</h2>
+<p>National wire services and online "send flowers" sites farm your order out to whichever shop happens to be available — sometimes hundreds of miles away — and skim a fee off the top. For a wedding, that's a risk you don't want. When you book a local McAllen studio, you get:</p>
+<ul>
+  <li><strong>Flowers arranged here, not shipped in a box.</strong> Your blooms are conditioned and designed in our Pharr studio and delivered the same morning — never trucked across the country half-wilted.</li>
+  <li><strong>A real person who knows McAllen venues.</strong> We've delivered to the Convention Center, Cimarron Country Club, Quinta Mazatlán, and dozens of churches and halls across Hidalgo County. We know the loading docks, the setup windows, and the lighting.</li>
+  <li><strong>Custom design, not a catalog photo.</strong> A wire-service bouquet is a stock image. Ours is built around your colors, your dress, and your venue.</li>
+  <li><strong>Same-day support if something changes.</strong> A local florist can adjust, add a boutonnière, or fix a last-minute surprise. A 1-800 number can't.</li>
+</ul>
+
+<h2>The McAllen Wedding Flower Checklist</h2>
+<p>Most McAllen weddings include some combination of the following. You don't need everything — we'll help you prioritize for your budget.</p>
+<ul>
+  <li><strong>Bridal bouquet</strong> — the centerpiece of your florals, designed to complement your gown and photograph beautifully.</li>
+  <li><strong>Bridesmaid bouquets</strong> — smaller echoes of yours, coordinated in color.</li>
+  <li><strong>Boutonnières &amp; corsages</strong> — for the groom, groomsmen, fathers, mothers, and grandparents.</li>
+  <li><strong>Ceremony florals</strong> — an arch or arbor, altar arrangements, and aisle or pew accents.</li>
+  <li><strong>Reception centerpieces</strong> — low and lush for conversation, or tall and dramatic for ballroom impact.</li>
+  <li><strong>Accent pieces</strong> — cake flowers, head-table garland, bar arrangements, and a photo backdrop.</li>
+</ul>
+
+<h2>Seasonal Blooms for an RGV Wedding</h2>
+<p>The Rio Grande Valley's long warm season shapes what looks freshest on your wedding day. A few notes from our studio:</p>
+<ul>
+  <li><strong>Spring (Feb–May):</strong> peak wedding season in McAllen. Garden roses, ranunculus, sweet peas, and lisianthus are gorgeous and widely available before the worst heat arrives.</li>
+  <li><strong>Summer (Jun–Sep):</strong> our intense valley heat is hard on delicate blooms outdoors. We lean on heat-tolerant choices — roses, orchids, anthuriums, and tropical greenery — and we time delivery and setup as late as your venue allows to keep everything crisp.</li>
+  <li><strong>Fall (Oct–Nov):</strong> a beautiful, comfortable season for McAllen weddings. Dahlias, deep-toned roses, and marigold (<em>cempasúchil</em>) accents nod to local tradition.</li>
+  <li><strong>Winter (Dec–Jan):</strong> mild RGV winters keep almost everything on the table. Amaryllis, anemones, and white-and-greenery palettes feel fresh and elegant.</li>
+</ul>
+
+<h2>McAllen Wedding Venues We Know Well</h2>
+<p>Floral logistics change from venue to venue. Here's a quick look at a few McAllen favorites:</p>
+<ul>
+  <li><strong>McAllen Convention Center</strong> — big ballroom ceilings reward taller centerpieces and a statement arch so your florals don't get lost in the space.</li>
+  <li><strong>Quinta Mazatlán</strong> — a historic adobe set in a bird sanctuary; loose, garden-style designs with natural greenery suit the setting perfectly.</li>
+  <li><strong>Cimarron Country Club</strong> — classic country-club elegance; white, blush, and greenery palettes shine here.</li>
+  <li><strong>Local churches &amp; chapels</strong> — from Our Lady of Sorrows to neighborhood parishes, we design altar pieces and pew accents sized to the sanctuary.</li>
+</ul>
+
+<h2>How Much Do Wedding Flowers Cost in McAllen?</h2>
+<p>There's no single answer — it depends on guest count, how many tables you're filling, and the blooms you love. As a rough guide, an intimate McAllen wedding's personal flowers (bouquet, a few bridesmaids, boutonnières) start in the low hundreds, while a full ceremony-and-reception package with arches and dozens of centerpieces scales from there. The honest, money-saving move is a quick call: tell us your budget and we'll design backward from it, putting your dollars where they show most in photos.</p>
+
+<h2>When to Book — and How</h2>
+<p>For peak McAllen dates (spring and fall), reach out 2–3 months ahead to lock your date; 4–6 weeks is fine for off-peak. Booking is simple: share your date, venue, colors, and a few inspiration photos, and we'll build a custom plan, confirm details about two weeks out, then deliver and set up the morning of. Start anytime at our <a href="/flower-delivery/mcallen/weddings">McAllen wedding flowers</a> page or call <strong>(956) 313-1847</strong>.</p>`,
+    faqs: [
+      {
+        q: "How far in advance should I order wedding flowers in McAllen?",
+        a: "For peak spring and fall dates, book 2–3 months ahead to guarantee your date. For off-peak weddings, 4–6 weeks is usually enough. The sooner you reach out, the more flexibility we have on blooms and setup timing.",
+      },
+      {
+        q: "Do you deliver and set up wedding flowers at McAllen venues?",
+        a: "Yes. We deliver fresh-from-studio florals and set up at McAllen venues including the Convention Center, Quinta Mazatlán, and Cimarron Country Club, plus local churches. Give us your venue and we'll handle the logistics.",
+      },
+      {
+        q: "Why use a local McAllen florist instead of an online wire service?",
+        a: "Wire services forward your order to a random shop and add a fee. As a local Pharr studio minutes from McAllen, we arrange your flowers by hand, deliver them fresh the same morning, and can adjust in person if anything changes — something a 1-800 number can't do.",
+      },
+      {
+        q: "What wedding flowers hold up best in McAllen's summer heat?",
+        a: "For summer weddings we lean on heat-tolerant blooms like roses, orchids, anthuriums, and tropical greenery, and we time delivery as late as your venue allows. We'll steer you away from delicate flowers that wilt fast in RGV heat.",
+      },
+      {
+        q: "Can you match my wedding colors and Pinterest board?",
+        a: "Absolutely. Share your palette, your dress style, and a few inspiration photos and we'll source and arrange blooms to match for your McAllen wedding.",
+      },
+      {
+        q: "How much do wedding flowers cost in McAllen?",
+        a: "It depends on guest count and how elaborate your ceremony and reception florals are. Personal flowers for an intimate wedding start in the low hundreds; full packages scale up. Call (956) 313-1847 with your budget and we'll design to fit it.",
+      },
+    ],
+    tags: [
+      "wedding flowers McAllen",
+      "McAllen wedding florist",
+      "bridal bouquet McAllen",
+      "wedding flowers RGV",
+    ],
+  },
+  // ── Wedding Flowers McAllen (ES) ────────────────────────────────────────────
+  {
+    slug: "flores-para-boda-mcallen-guia",
+    lang: "es",
+    altSlug: "wedding-flowers-mcallen-guide",
+    metaTitle: "Flores para Boda en McAllen — Guía Local | Forget Me Not",
+    metaDescription:
+      "Flores para boda en McAllen: ramos, arcos y centros de mesa de un estudio local. Frescas, hechas a mano, el mismo día. Llama a Forget Me Not: (956) 313-1847.",
+    h1: "Flores para Boda en McAllen: Guía Local para Novias",
+    publishDate: "2026-06-22",
+    category: "bodas",
+    categoryLabel: "Bodas",
+    excerpt:
+      "Todo lo que una pareja de McAllen necesita para planear las flores de su boda — ramos, arcos, centros de mesa, flores de temporada del Valle y por qué un estudio local supera a un servicio nacional.",
+    heroImage: "/og.png",
+    bodyHtml: `<p>Planear las <strong>flores para tu boda en McAllen</strong> es una de las decisiones más personales de tu gran día — y una de las más fotografiadas. Desde el ramo que llevas al altar en Our Lady of Sorrows hasta los centros de mesa que iluminan cada mesa en el McAllen Convention Center, las flores marcan todo el ambiente. En <strong>Forget Me Not Flowers &amp; Gifts</strong> en Pharr, a minutos de McAllen, Mariela arregla cada pieza a mano en nuestro estudio local y la entrega fresca la mañana de tu boda. Esta guía te explica todo lo que una pareja de McAllen necesita saber.</p>
+
+<p>¿Lista para empezar? Visita nuestra página de <a href="/flower-delivery/mcallen/weddings">flores de boda en McAllen</a> o llama al <a href="tel:+19563131847">(956) 313-1847</a> para una consulta gratuita.</p>
+
+<h2>¿Por Qué Elegir un Florista Local de McAllen en Lugar de un Servicio Nacional?</h2>
+<p>Los servicios nacionales y los sitios de "envía flores" en línea reparten tu pedido a la florería que esté disponible — a veces a cientos de millas — y se quedan con una comisión. Para una boda, ese es un riesgo que no quieres correr. Al reservar con un estudio local de McAllen obtienes:</p>
+<ul>
+  <li><strong>Flores arregladas aquí, no enviadas en caja.</strong> Tus flores se preparan y diseñan en nuestro estudio en Pharr y se entregan la misma mañana — nunca transportadas medio marchitas por todo el país.</li>
+  <li><strong>Una persona real que conoce las sedes de McAllen.</strong> Hemos entregado en el Convention Center, Cimarron Country Club, Quinta Mazatlán y decenas de iglesias y salones del condado de Hidalgo. Conocemos los accesos, los horarios de montaje y la iluminación.</li>
+  <li><strong>Diseño personalizado, no una foto de catálogo.</strong> Un ramo de servicio nacional es una imagen genérica. El nuestro se construye alrededor de tus colores, tu vestido y tu sede.</li>
+  <li><strong>Apoyo el mismo día si algo cambia.</strong> Un florista local puede ajustar, agregar un boutonnière o resolver una sorpresa de último minuto. Un número 1-800 no puede.</li>
+</ul>
+
+<h2>La Lista de Flores para tu Boda en McAllen</h2>
+<p>La mayoría de las bodas en McAllen incluyen alguna combinación de lo siguiente. No necesitas todo — te ayudamos a priorizar según tu presupuesto.</p>
+<ul>
+  <li><strong>Ramo de novia</strong> — el centro de tus florales, diseñado para complementar tu vestido y lucir hermoso en las fotos.</li>
+  <li><strong>Ramos de las damas</strong> — versiones más pequeñas del tuyo, coordinadas en color.</li>
+  <li><strong>Boutonnières y corsages</strong> — para el novio, padrinos, papás, mamás y abuelos.</li>
+  <li><strong>Flores para la ceremonia</strong> — un arco o pérgola, arreglos de altar y acentos en el pasillo o las bancas.</li>
+  <li><strong>Centros de mesa para la recepción</strong> — bajos y exuberantes para conversar, o altos y dramáticos para impacto de salón.</li>
+  <li><strong>Piezas de acento</strong> — flores para el pastel, guirnalda de la mesa principal, arreglos del bar y un backdrop para fotos.</li>
+</ul>
+
+<h2>Flores de Temporada para una Boda en el Valle</h2>
+<p>La larga temporada cálida del Valle del Río Grande define qué luce más fresco el día de tu boda. Algunas notas desde nuestro estudio:</p>
+<ul>
+  <li><strong>Primavera (feb–may):</strong> la temporada alta de bodas en McAllen. Las rosas de jardín, los ranúnculos, los guisantes de olor y el lisianthus son hermosos y abundan antes de que llegue el calor más fuerte.</li>
+  <li><strong>Verano (jun–sep):</strong> el calor intenso del Valle es duro con las flores delicadas al aire libre. Preferimos opciones tolerantes al calor — rosas, orquídeas, anturios y follaje tropical — y programamos la entrega y el montaje lo más tarde posible para mantener todo fresco.</li>
+  <li><strong>Otoño (oct–nov):</strong> una temporada hermosa y agradable para bodas en McAllen. Dalias, rosas de tonos profundos y acentos de cempasúchil que rinden homenaje a la tradición local.</li>
+  <li><strong>Invierno (dic–ene):</strong> los inviernos suaves del Valle mantienen casi todo disponible. Amaryllis, anémonas y paletas de blanco con follaje se ven frescas y elegantes.</li>
+</ul>
+
+<h2>Sedes de Bodas en McAllen que Conocemos Bien</h2>
+<p>La logística floral cambia de una sede a otra. Aquí un vistazo a algunas favoritas de McAllen:</p>
+<ul>
+  <li><strong>McAllen Convention Center</strong> — los techos altos del salón premian los centros de mesa altos y un arco de impacto para que tus flores no se pierdan en el espacio.</li>
+  <li><strong>Quinta Mazatlán</strong> — un adobe histórico dentro de un santuario de aves; los diseños sueltos estilo jardín con follaje natural quedan perfectos.</li>
+  <li><strong>Cimarron Country Club</strong> — elegancia clásica de club campestre; las paletas de blanco, blush y verde brillan aquí.</li>
+  <li><strong>Iglesias y capillas locales</strong> — desde Our Lady of Sorrows hasta parroquias del barrio, diseñamos arreglos de altar y acentos de banca al tamaño del santuario.</li>
+</ul>
+
+<h2>¿Cuánto Cuestan las Flores de Boda en McAllen?</h2>
+<p>No hay una sola respuesta — depende del número de invitados, cuántas mesas vas a llenar y las flores que amas. Como guía general, las flores personales de una boda íntima en McAllen (ramo, algunas damas, boutonnières) comienzan en los cientos bajos, mientras que un paquete completo de ceremonia y recepción con arcos y decenas de centros de mesa crece desde ahí. El mejor consejo para ahorrar es una llamada rápida: dinos tu presupuesto y diseñamos a partir de él, poniendo tu dinero donde más se nota en las fotos.</p>
+
+<h2>Cuándo Reservar — y Cómo</h2>
+<p>Para fechas de temporada alta en McAllen (primavera y otoño), contáctanos con 2–3 meses de anticipación para asegurar tu fecha; 4–6 semanas está bien fuera de temporada. Reservar es sencillo: comparte tu fecha, sede, colores y algunas fotos de inspiración, y crearemos un plan personalizado, confirmaremos los detalles unas dos semanas antes, y entregaremos y montaremos la mañana de la boda. Empieza cuando quieras en nuestra página de <a href="/flower-delivery/mcallen/weddings">flores de boda en McAllen</a> o llama al <strong>(956) 313-1847</strong>.</p>`,
+    faqs: [
+      {
+        q: "¿Con cuánta anticipación debo pedir las flores de boda en McAllen?",
+        a: "Para fechas de primavera y otoño, reserva con 2–3 meses de anticipación para asegurar tu fecha. Fuera de temporada, 4–6 semanas suele ser suficiente. Entre más pronto nos contactes, más flexibilidad tenemos con las flores y los horarios de montaje.",
+      },
+      {
+        q: "¿Entregan y montan las flores de boda en las sedes de McAllen?",
+        a: "Sí. Entregamos florales frescos del estudio y montamos en sedes de McAllen como el Convention Center, Quinta Mazatlán y Cimarron Country Club, además de iglesias locales. Danos tu sede y nos encargamos de la logística.",
+      },
+      {
+        q: "¿Por qué usar un florista local de McAllen en lugar de un servicio en línea?",
+        a: "Los servicios nacionales reenvían tu pedido a una florería al azar y agregan una comisión. Como estudio local en Pharr, a minutos de McAllen, arreglamos tus flores a mano, las entregamos frescas la misma mañana y podemos ajustar en persona si algo cambia — algo que un número 1-800 no puede hacer.",
+      },
+      {
+        q: "¿Qué flores de boda aguantan mejor el calor del verano en McAllen?",
+        a: "Para bodas de verano preferimos flores tolerantes al calor como rosas, orquídeas, anturios y follaje tropical, y programamos la entrega lo más tarde posible. Te alejamos de las flores delicadas que se marchitan rápido con el calor del Valle.",
+      },
+      {
+        q: "¿Pueden combinar con mis colores de boda y mi tablero de Pinterest?",
+        a: "Por supuesto. Comparte tu paleta, el estilo de tu vestido y algunas fotos de inspiración y seleccionaremos y arreglaremos las flores para que combinen con tu boda en McAllen.",
+      },
+      {
+        q: "¿Cuánto cuestan las flores de boda en McAllen?",
+        a: "Depende del número de invitados y de qué tan elaborados sean tus florales de ceremonia y recepción. Las flores personales de una boda íntima comienzan en los cientos bajos; los paquetes completos crecen desde ahí. Llama al (956) 313-1847 con tu presupuesto y diseñamos a tu medida.",
+      },
+    ],
+    tags: [
+      "flores para boda McAllen",
+      "florista bodas McAllen",
+      "ramo de novia McAllen",
+      "flores boda Valle",
+    ],
+  },
+  // ── Wedding Flowers Pharr (EN) ──────────────────────────────────────────────
+  {
+    slug: "wedding-flowers-pharr-guide",
+    lang: "en",
+    altSlug: "flores-para-boda-pharr-guia",
+    metaTitle: "Wedding Flowers Pharr TX — Hometown Florist | Forget Me Not",
+    metaDescription:
+      "Wedding flowers in Pharr from a hometown studio: bouquets, arches & centerpieces, hand-arranged and delivered fresh. Call Forget Me Not: (956) 313-1847.",
+    h1: "Wedding Flowers in Pharr: Your Hometown Florist's Guide",
+    publishDate: "2026-06-25",
+    category: "weddings",
+    categoryLabel: "Weddings",
+    excerpt:
+      "Planning a Pharr wedding? Here's how to choose bouquets, ceremony flowers, and centerpieces from a studio right here in town — fresh, hand-arranged, and delivered the same morning.",
+    heroImage: "/og.png",
+    bodyHtml: `<p>If you're getting married in Pharr, you have a real advantage: your florist is right here in town. <strong>Forget Me Not Flowers &amp; Gifts</strong> is a Pharr studio, which means your <strong>wedding flowers</strong> are conditioned, designed, and delivered without ever leaving the city you're celebrating in. Mariela hand-arranges every bouquet, arch, and centerpiece and delivers it fresh the morning of your wedding — to St. Margaret Mary Catholic Church, a reception hall off Cage Boulevard, a backyard celebration, or wherever your day takes place.</p>
+
+<p>Want to jump straight in? See our <a href="/flower-delivery/pharr/weddings">Pharr wedding flower delivery</a> page or call <a href="tel:+19563131847">(956) 313-1847</a>.</p>
+
+<h2>The Hometown Advantage</h2>
+<p>Being your neighbor isn't just sentimental — it's practical. When your florist is in Pharr:</p>
+<ul>
+  <li><strong>Delivery is minutes, not hours.</strong> Your flowers arrive crisp and cool, with no long highway haul to wilt them.</li>
+  <li><strong>We know the local venues and churches.</strong> From parish sanctuaries to event halls and family backyards, we've set up across Pharr and know how each space photographs.</li>
+  <li><strong>Last-minute changes are easy.</strong> Need an extra corsage for an abuela who's now attending? We're right around the corner.</li>
+  <li><strong>You're supporting a local small business</strong> — not a national wire service that ships a stock bouquet and pockets a fee.</li>
+</ul>
+
+<h2>Why Local Beats a Wire Service for Weddings</h2>
+<p>Online "1-800" flower sites and wire services hand your wedding order to whatever shop is free, sometimes far away, and take a cut. For the most photographed day of your life, that's a gamble. A Pharr studio gives you a real designer who builds around your gown, your colors, and your venue — and who delivers fresh blooms the same morning instead of a box that traveled for days. If something needs adjusting on the day, a neighbor can help; a call center can't.</p>
+
+<h2>What Goes Into a Pharr Wedding</h2>
+<ul>
+  <li><strong>Bridal bouquet</strong> — the heart of your florals, designed to flatter your dress and shine in every photo.</li>
+  <li><strong>Bridesmaid bouquets &amp; flower-girl petals</strong> — coordinated with your palette.</li>
+  <li><strong>Boutonnières &amp; corsages</strong> — for the wedding party and honored family.</li>
+  <li><strong>Ceremony flowers</strong> — an arch or arbor, altar arrangements, and aisle or pew accents for your church or venue.</li>
+  <li><strong>Reception centerpieces</strong> — low and lush or tall and dramatic, sized to your tables.</li>
+  <li><strong>Extras</strong> — cake flowers, sweetheart-table garland, and a floral backdrop for photos.</li>
+</ul>
+
+<h2>Seasonal Notes for a Pharr Wedding</h2>
+<p>Pharr shares the Rio Grande Valley's warm, long growing season, so a little seasonal planning keeps everything looking its best:</p>
+<ul>
+  <li><strong>Spring</strong> is prime wedding season — garden roses, ranunculus, and lisianthus are at their freshest before the deep summer heat.</li>
+  <li><strong>Summer</strong> brings serious RGV heat; for outdoor Pharr ceremonies we choose heat-tolerant roses, orchids, and tropical greenery and deliver as late as your timeline allows.</li>
+  <li><strong>Fall</strong> is comfortable and gorgeous — dahlias and rich-toned roses, with marigold (<em>cempasúchil</em>) accents for couples who want a local touch.</li>
+  <li><strong>Winter</strong> in Pharr stays mild, so crisp white-and-greenery and elegant amaryllis designs are easy to pull off.</li>
+</ul>
+
+<h2>How Much Should You Budget?</h2>
+<p>Pharr wedding flowers scale with your guest count and how much of the ceremony and reception you want to dress in blooms. Personal flowers for an intimate wedding start in the low hundreds; a full package with an arch and many centerpieces grows from there. The smartest first step is to tell us your number — we design backward from your budget so your dollars land where they matter most in photos.</p>
+
+<h2>Booking Your Pharr Wedding Flowers</h2>
+<p>Reach out 4–6 weeks ahead for most dates, and 2–3 months for peak spring and fall weekends. Share your date, venue, colors, and a few inspiration photos; we'll build a custom plan, confirm the details about two weeks out, and deliver and set up the morning of — all from right here in Pharr. Start at our <a href="/flower-delivery/pharr/weddings">Pharr wedding flowers</a> page or call <strong>(956) 313-1847</strong>.</p>`,
+    faqs: [
+      {
+        q: "Are you actually located in Pharr?",
+        a: "Yes — Forget Me Not Flowers & Gifts is a Pharr-based studio. Your wedding flowers are arranged here in town and delivered fresh the same morning, with no long highway haul.",
+      },
+      {
+        q: "How early should I book wedding flowers in Pharr?",
+        a: "For most Pharr weddings, 4–6 weeks ahead is fine. For peak spring and fall weekends, book 2–3 months out to guarantee your date and first-choice blooms.",
+      },
+      {
+        q: "Do you deliver and set up at Pharr churches and venues?",
+        a: "Yes. We deliver and set up at Pharr churches like St. Margaret Mary, local event halls, and private backyard celebrations. Tell us your venue and we'll handle delivery timing and setup.",
+      },
+      {
+        q: "Why choose a local Pharr florist over an online flower service?",
+        a: "Online services forward your order to a random shop and add a fee, often shipping a stock bouquet from far away. As your hometown Pharr studio, we hand-arrange around your colors and dress, deliver fresh the same morning, and can fix last-minute changes in person.",
+      },
+      {
+        q: "What flowers work best for a summer Pharr wedding?",
+        a: "For Pharr's hot summers we favor heat-tolerant blooms — roses, orchids, anthuriums, and tropical greenery — and time delivery as late as your venue allows to keep arrangements crisp outdoors.",
+      },
+      {
+        q: "How much do wedding flowers cost in Pharr?",
+        a: "It depends on guest count and how elaborate your florals are. Personal flowers for an intimate wedding start in the low hundreds; full ceremony-and-reception packages scale up. Call (956) 313-1847 with your budget and we'll design to fit it.",
+      },
+    ],
+    tags: [
+      "wedding flowers Pharr",
+      "Pharr wedding florist",
+      "bridal bouquet Pharr",
+      "wedding flowers RGV",
+    ],
+  },
+  // ── Wedding Flowers Pharr (ES) ──────────────────────────────────────────────
+  {
+    slug: "flores-para-boda-pharr-guia",
+    lang: "es",
+    altSlug: "wedding-flowers-pharr-guide",
+    metaTitle: "Flores para Boda en Pharr TX — Florista Local | Forget Me Not",
+    metaDescription:
+      "Flores para boda en Pharr de un estudio local: ramos, arcos y centros de mesa, hechos a mano y entregados frescos. Llama a Forget Me Not: (956) 313-1847.",
+    h1: "Flores para Boda en Pharr: Guía de tu Florista Local",
+    publishDate: "2026-06-25",
+    category: "bodas",
+    categoryLabel: "Bodas",
+    excerpt:
+      "¿Planeas una boda en Pharr? Así eliges ramos, flores para la ceremonia y centros de mesa de un estudio aquí mismo en la ciudad — frescos, hechos a mano y entregados la misma mañana.",
+    heroImage: "/og.png",
+    bodyHtml: `<p>Si te casas en Pharr, tienes una ventaja real: tu florista está aquí mismo en la ciudad. <strong>Forget Me Not Flowers &amp; Gifts</strong> es un estudio de Pharr, lo que significa que tus <strong>flores de boda</strong> se preparan, diseñan y entregan sin salir nunca de la ciudad donde celebras. Mariela arregla a mano cada ramo, arco y centro de mesa y lo entrega fresco la mañana de tu boda — a la iglesia St. Margaret Mary, a un salón sobre Cage Boulevard, a una celebración en el patio o donde sea que ocurra tu día.</p>
+
+<p>¿Quieres ir directo? Visita nuestra página de <a href="/flower-delivery/pharr/weddings">flores de boda en Pharr</a> o llama al <a href="tel:+19563131847">(956) 313-1847</a>.</p>
+
+<h2>La Ventaja de lo Local</h2>
+<p>Ser tu vecino no es solo sentimental — es práctico. Cuando tu florista está en Pharr:</p>
+<ul>
+  <li><strong>La entrega toma minutos, no horas.</strong> Tus flores llegan frescas y firmes, sin un largo viaje por carretera que las marchite.</li>
+  <li><strong>Conocemos las sedes e iglesias locales.</strong> Desde santuarios parroquiales hasta salones de eventos y patios familiares, hemos montado por todo Pharr y sabemos cómo luce cada espacio en fotos.</li>
+  <li><strong>Los cambios de último minuto son fáciles.</strong> ¿Necesitas un corsage extra para una abuela que ahora sí asiste? Estamos a la vuelta de la esquina.</li>
+  <li><strong>Apoyas a un pequeño negocio local</strong> — no a un servicio nacional que envía un ramo genérico y se queda con una comisión.</li>
+</ul>
+
+<h2>Por Qué lo Local Supera a un Servicio Nacional en Bodas</h2>
+<p>Los sitios de flores "1-800" y los servicios nacionales entregan tu pedido de boda a cualquier florería disponible, a veces lejos, y se llevan una parte. Para el día más fotografiado de tu vida, eso es un riesgo. Un estudio de Pharr te da una diseñadora real que construye alrededor de tu vestido, tus colores y tu sede — y que entrega flores frescas la misma mañana en lugar de una caja que viajó por días. Si algo necesita ajustarse ese día, una vecina puede ayudar; un centro de llamadas no.</p>
+
+<h2>Qué Lleva una Boda en Pharr</h2>
+<ul>
+  <li><strong>Ramo de novia</strong> — el corazón de tus florales, diseñado para favorecer tu vestido y brillar en cada foto.</li>
+  <li><strong>Ramos de las damas y pétalos de la niña de las flores</strong> — coordinados con tu paleta.</li>
+  <li><strong>Boutonnières y corsages</strong> — para el séquito y la familia de honor.</li>
+  <li><strong>Flores para la ceremonia</strong> — un arco o pérgola, arreglos de altar y acentos de pasillo o banca para tu iglesia o sede.</li>
+  <li><strong>Centros de mesa para la recepción</strong> — bajos y exuberantes o altos y dramáticos, al tamaño de tus mesas.</li>
+  <li><strong>Extras</strong> — flores para el pastel, guirnalda para la mesa de novios y un backdrop floral para fotos.</li>
+</ul>
+
+<h2>Notas de Temporada para una Boda en Pharr</h2>
+<p>Pharr comparte la temporada cálida y larga del Valle del Río Grande, así que un poco de planeación estacional mantiene todo en su mejor punto:</p>
+<ul>
+  <li><strong>La primavera</strong> es la temporada principal de bodas — las rosas de jardín, los ranúnculos y el lisianthus están más frescos antes del calor profundo del verano.</li>
+  <li><strong>El verano</strong> trae el calor serio del Valle; para ceremonias al aire libre en Pharr elegimos rosas tolerantes al calor, orquídeas y follaje tropical, y entregamos lo más tarde que permita tu horario.</li>
+  <li><strong>El otoño</strong> es cómodo y precioso — dalias y rosas de tonos intensos, con acentos de cempasúchil para parejas que quieren un toque local.</li>
+  <li><strong>El invierno</strong> en Pharr se mantiene templado, así que los diseños frescos de blanco con follaje y el elegante amaryllis son fáciles de lograr.</li>
+</ul>
+
+<h2>¿Cuánto Debes Presupuestar?</h2>
+<p>Las flores de boda en Pharr crecen según tu número de invitados y cuánto de la ceremonia y la recepción quieras vestir con flores. Las flores personales de una boda íntima comienzan en los cientos bajos; un paquete completo con arco y muchos centros de mesa crece desde ahí. El primer paso más inteligente es decirnos tu cifra — diseñamos a partir de tu presupuesto para que tu dinero llegue donde más importa en las fotos.</p>
+
+<h2>Cómo Reservar tus Flores de Boda en Pharr</h2>
+<p>Contáctanos con 4–6 semanas de anticipación para la mayoría de las fechas, y 2–3 meses para los fines de semana de temporada alta en primavera y otoño. Comparte tu fecha, sede, colores y algunas fotos de inspiración; crearemos un plan personalizado, confirmaremos los detalles unas dos semanas antes, y entregaremos y montaremos la misma mañana — todo desde aquí en Pharr. Empieza en nuestra página de <a href="/flower-delivery/pharr/weddings">flores de boda en Pharr</a> o llama al <strong>(956) 313-1847</strong>.</p>`,
+    faqs: [
+      {
+        q: "¿Realmente están ubicados en Pharr?",
+        a: "Sí — Forget Me Not Flowers & Gifts es un estudio en Pharr. Tus flores de boda se arreglan aquí mismo en la ciudad y se entregan frescas la misma mañana, sin un largo viaje por carretera.",
+      },
+      {
+        q: "¿Con cuánta anticipación debo reservar las flores de boda en Pharr?",
+        a: "Para la mayoría de las bodas en Pharr, 4–6 semanas de anticipación está bien. Para los fines de semana de temporada alta en primavera y otoño, reserva con 2–3 meses para asegurar tu fecha y tus flores preferidas.",
+      },
+      {
+        q: "¿Entregan y montan en las iglesias y sedes de Pharr?",
+        a: "Sí. Entregamos y montamos en iglesias de Pharr como St. Margaret Mary, salones locales de eventos y celebraciones privadas en patios. Dinos tu sede y nos encargamos del horario de entrega y el montaje.",
+      },
+      {
+        q: "¿Por qué elegir un florista local de Pharr en lugar de un servicio en línea?",
+        a: "Los servicios en línea reenvían tu pedido a una florería al azar y agregan una comisión, a menudo enviando un ramo genérico desde lejos. Como tu estudio local en Pharr, arreglamos a mano según tus colores y vestido, entregamos fresco la misma mañana y resolvemos cambios de último minuto en persona.",
+      },
+      {
+        q: "¿Qué flores funcionan mejor para una boda de verano en Pharr?",
+        a: "Para los veranos calurosos de Pharr preferimos flores tolerantes al calor — rosas, orquídeas, anturios y follaje tropical — y programamos la entrega lo más tarde posible para mantener los arreglos firmes al aire libre.",
+      },
+      {
+        q: "¿Cuánto cuestan las flores de boda en Pharr?",
+        a: "Depende del número de invitados y de qué tan elaborados sean tus florales. Las flores personales de una boda íntima comienzan en los cientos bajos; los paquetes completos de ceremonia y recepción crecen desde ahí. Llama al (956) 313-1847 con tu presupuesto y diseñamos a tu medida.",
+      },
+    ],
+    tags: [
+      "flores para boda Pharr",
+      "florista bodas Pharr",
+      "ramo de novia Pharr",
+      "flores boda Valle",
+    ],
+  },
+  // ── Just Because Flowers (EN) ───────────────────────────────────────────────
+  {
+    slug: "just-because-flowers-rgv",
+    lang: "en",
+    altSlug: "flores-solo-porque-si-rgv",
+    metaTitle: "Just Because Flowers in the RGV — Surprise Delivery | Forget Me Not",
+    metaDescription:
+      "Send surprise 'just because' flowers anywhere in the RGV, same-day before 3 PM. No occasion needed — just love. Call Forget Me Not: (956) 313-1847.",
+    h1: '"Just Because" Flowers: The Best Surprise in the Rio Grande Valley',
+    publishDate: "2026-06-27",
+    category: "just-because",
+    categoryLabel: "Just Because",
+    excerpt:
+      "No birthday, no anniversary, no reason at all — that's exactly the point. Surprise someone in the RGV with same-day 'just because' flowers and watch their whole day change.",
+    heroImage: "/og.png",
+    bodyHtml: `<p>The most memorable flowers aren't the ones that arrive on a birthday or anniversary — those are expected. The ones people never forget are the bouquets that show up on an ordinary Tuesday, for no reason at all. <strong>"Just because" flowers</strong> say <em>I was thinking about you</em> louder than any occasion ever could. At <strong>Forget Me Not Flowers &amp; Gifts</strong> in Pharr, we deliver surprise bouquets across the entire Rio Grande Valley the same day — order before 3 PM and we'll make someone's ordinary day extraordinary.</p>
+
+<p>Ready to surprise someone? Send <a href="/flower-delivery/mcallen/just-because">just because flowers in McAllen</a>, <a href="/flower-delivery/edinburg/just-because">just because flowers in Edinburg</a>, or browse our full <a href="/occasions/just-because">just because flower collection</a>. Or simply call <a href="tel:+19563131847">(956) 313-1847</a>.</p>
+
+<h2>Why "Just Because" Flowers Hit Harder Than Holiday Flowers</h2>
+<p>On Valentine's Day or a birthday, flowers are part of the script — lovely, but anticipated. A surprise bouquet on a random weekday breaks the script entirely. It tells someone they were on your mind when nothing required it. That's why "just because" flowers so often produce the biggest reaction: the happy disbelief, the "wait, what's this for?", the photo texted to the whole family. Psychologists have long noted that unexpected gifts create stronger positive emotions than expected ones — and here in the RGV, where family and connection run deep, a surprise delivery lands especially hard.</p>
+
+<h2>Who Deserves a Just-Because Surprise?</h2>
+<ul>
+  <li><strong>Your partner</strong> — keep the romance alive with flowers that aren't tied to a fight or a holiday, just love.</li>
+  <li><strong>Mom or Grandma</strong> — abuelas in the Valley light up when flowers arrive "for no reason." It's a small gift that says everything.</li>
+  <li><strong>A friend having a hard week</strong> — sometimes the best thing you can do is brighten a doorstep in McAllen, Edinburg, or Mission.</li>
+  <li><strong>A coworker or mentor</strong> — a simple, classy thank-you that doesn't need a card-shop occasion.</li>
+  <li><strong>Yourself</strong> — yes, really. Self-gifted flowers on the kitchen table are one of the easiest ways to lift your own week.</li>
+</ul>
+
+<h2>The Best Flowers to Send "Just Because"</h2>
+<p>Because there's no occasion to match, just-because bouquets are wonderfully flexible. Our most-loved surprise arrangements:</p>
+<ul>
+  <li><strong>Sunflowers</strong> — pure cheer; impossible to receive without smiling.</li>
+  <li><strong>A loose garden mix</strong> — seasonal RGV blooms gathered in a natural, "I picked these for you" style.</li>
+  <li><strong>Classic roses</strong> — in a soft pink or warm peach rather than the expected red, for an everyday romance feel.</li>
+  <li><strong>Daisies and wildflower bunches</strong> — light, happy, and unpretentious.</li>
+  <li><strong>A potted orchid or succulent</strong> — for someone who'll love a surprise that lasts for months.</li>
+</ul>
+<p>Not sure? Tell us a little about the person and we'll match the bouquet to them — we've been making those matches for Valley families for years.</p>
+
+<h2>Same-Day Surprise Delivery Across the Valley</h2>
+<p>The magic of a just-because gift is the timing — it should land while the impulse is fresh. We deliver same-day across the RGV when you order before our 3 PM cut-off:</p>
+<ul>
+  <li><a href="/flower-delivery/mcallen/just-because">Just because flowers in McAllen</a></li>
+  <li><a href="/flower-delivery/edinburg/just-because">Just because flowers in Edinburg</a></li>
+  <li><a href="/flower-delivery/mission/just-because">Just because flowers in Mission</a></li>
+  <li><a href="/flower-delivery/pharr/just-because">Just because flowers in Pharr</a></li>
+</ul>
+<p>We reach every city in the Valley — from Weslaco to Harlingen to Brownsville. For far-out towns, next-day delivery keeps the surprise alive.</p>
+
+<h2>Make the Surprise Even Better</h2>
+<ul>
+  <li><strong>Send it anonymously</strong> — leave the card blank or sign it "a secret admirer" for an extra layer of mystery.</li>
+  <li><strong>Time it for the morning</strong> — flowers waiting when someone gets home from work, or arriving mid-morning, set the tone for the whole day.</li>
+  <li><strong>Add a short, honest note</strong> — "thinking of you" beats a long speech. We hand-write it for you.</li>
+  <li><strong>Pick a vase arrangement</strong> — it arrives ready to display, no scrambling for a container.</li>
+</ul>
+<p>There's never a wrong day to send flowers just because. Call <strong>(956) 313-1847</strong> or order before 3 PM for same-day surprise delivery anywhere in the Rio Grande Valley.</p>`,
+    faqs: [
+      {
+        q: 'What does "just because" flowers mean?',
+        a: '"Just because" flowers are a surprise bouquet sent for no special occasion — no birthday, holiday, or anniversary. They simply say "I was thinking of you," which is exactly why they\'re so memorable.',
+      },
+      {
+        q: "Can I get same-day just-because flower delivery in the RGV?",
+        a: "Yes. We deliver surprise flowers the same day to McAllen, Edinburg, Mission, Pharr, and every city in the Rio Grande Valley when you order before 3 PM. Call (956) 313-1847.",
+      },
+      {
+        q: "What are the best flowers to send for no reason?",
+        a: "Sunflowers, a loose garden mix, soft-colored roses, and cheerful daisies are favorites for just-because gifts. Tell us about the person and we'll match an arrangement to their personality.",
+      },
+      {
+        q: "Can I send just-because flowers anonymously?",
+        a: "Absolutely. Just let us know and we'll leave the card blank or sign it however you like — perfect for a secret-admirer surprise.",
+      },
+      {
+        q: "How much do just-because flowers cost?",
+        a: "Surprise bouquets start around $45 and go up depending on size and blooms. Call (956) 313-1847 and we'll find something beautiful in your budget.",
+      },
+      {
+        q: "Is it weird to send myself flowers just because?",
+        a: "Not at all — self-gifted flowers are one of the simplest ways to brighten your own week. Plenty of our RGV customers treat themselves to a fresh bouquet for the kitchen table.",
+      },
+    ],
+    tags: [
+      "just because flowers RGV",
+      "surprise flowers McAllen",
+      "same-day flower delivery",
+      "Rio Grande Valley florist",
+    ],
+  },
+  // ── Just Because Flowers (ES) ───────────────────────────────────────────────
+  {
+    slug: "flores-solo-porque-si-rgv",
+    lang: "es",
+    altSlug: "just-because-flowers-rgv",
+    metaTitle: "Flores Solo Porque Sí en el Valle — Entrega Sorpresa | Forget Me Not",
+    metaDescription:
+      'Envía flores sorpresa "solo porque sí" en todo el Valle, el mismo día antes de las 3 PM. Sin ocasión, solo amor. Llama a Forget Me Not: (956) 313-1847.',
+    h1: 'Flores "Solo Porque Sí": La Mejor Sorpresa del Valle de Texas',
+    publishDate: "2026-06-27",
+    category: "solo-porque-si",
+    categoryLabel: "Solo Porque Sí",
+    excerpt:
+      'Sin cumpleaños, sin aniversario, sin ninguna razón — y ese es justo el punto. Sorprende a alguien en el Valle con flores "solo porque sí" el mismo día y mira cómo cambia su día entero.',
+    heroImage: "/og.png",
+    bodyHtml: `<p>Las flores más memorables no son las que llegan en un cumpleaños o aniversario — esas se esperan. Las que nadie olvida son los ramos que aparecen un martes cualquiera, sin ninguna razón. Las <strong>flores "solo porque sí"</strong> dicen <em>estaba pensando en ti</em> más fuerte que cualquier ocasión. En <strong>Forget Me Not Flowers &amp; Gifts</strong> en Pharr, entregamos ramos sorpresa en todo el Valle del Río Grande el mismo día — pide antes de las 3 PM y haremos que el día común de alguien sea extraordinario.</p>
+
+<p>¿Lista para sorprender a alguien? Envía <a href="/flower-delivery/mcallen/just-because">flores solo porque sí en McAllen</a>, <a href="/flower-delivery/edinburg/just-because">flores solo porque sí en Edinburg</a>, o explora nuestra <a href="/occasions/just-because">colección de flores solo porque sí</a>. O simplemente llama al <a href="tel:+19563131847">(956) 313-1847</a>.</p>
+
+<h2>Por Qué las Flores "Solo Porque Sí" Pegan Más Fuerte que las de Día Festivo</h2>
+<p>En el Día de San Valentín o en un cumpleaños, las flores son parte del guion — hermosas, pero esperadas. Un ramo sorpresa en un día cualquiera rompe el guion por completo. Le dice a alguien que estuvo en tu mente cuando nada lo exigía. Por eso las flores "solo porque sí" suelen provocar la reacción más grande: la incredulidad feliz, el "espera, ¿y esto por qué?", la foto enviada a toda la familia. Los psicólogos han observado por años que los regalos inesperados generan emociones positivas más fuertes que los esperados — y aquí en el Valle, donde la familia y los lazos son profundos, una entrega sorpresa cae especialmente bien.</p>
+
+<h2>¿Quién Merece una Sorpresa "Solo Porque Sí"?</h2>
+<ul>
+  <li><strong>Tu pareja</strong> — mantén viva la romance con flores que no están ligadas a una pelea ni a un día festivo, solo amor.</li>
+  <li><strong>Mamá o la abuela</strong> — las abuelas del Valle se iluminan cuando llegan flores "sin razón". Es un detalle pequeño que lo dice todo.</li>
+  <li><strong>Una amiga con una semana difícil</strong> — a veces lo mejor que puedes hacer es alegrar una puerta en McAllen, Edinburg o Mission.</li>
+  <li><strong>Un compañero de trabajo o mentor</strong> — un gracias sencillo y elegante que no necesita una ocasión de tarjetería.</li>
+  <li><strong>Tú misma</strong> — sí, de verdad. Regalarte flores para la mesa de la cocina es una de las formas más fáciles de alegrar tu propia semana.</li>
+</ul>
+
+<h2>Las Mejores Flores para Enviar "Solo Porque Sí"</h2>
+<p>Como no hay una ocasión que igualar, los ramos solo porque sí son maravillosamente flexibles. Nuestros arreglos sorpresa más queridos:</p>
+<ul>
+  <li><strong>Girasoles</strong> — pura alegría; imposible recibirlos sin sonreír.</li>
+  <li><strong>Un ramo silvestre mixto</strong> — flores de temporada del Valle reunidas en un estilo natural, de "las corté para ti".</li>
+  <li><strong>Rosas clásicas</strong> — en rosa suave o durazno cálido en lugar del rojo esperado, para un romance cotidiano.</li>
+  <li><strong>Margaritas y ramos de flores silvestres</strong> — ligeros, alegres y sin pretensiones.</li>
+  <li><strong>Una orquídea o suculenta en maceta</strong> — para alguien que amará una sorpresa que dura meses.</li>
+</ul>
+<p>¿No estás segura? Cuéntanos un poco sobre la persona y combinamos el ramo con ella — llevamos años haciendo esas combinaciones para las familias del Valle.</p>
+
+<h2>Entrega Sorpresa el Mismo Día en Todo el Valle</h2>
+<p>La magia de un regalo solo porque sí está en el momento — debe llegar mientras el impulso está fresco. Entregamos el mismo día en todo el Valle cuando pides antes de las 3 PM:</p>
+<ul>
+  <li><a href="/flower-delivery/mcallen/just-because">Flores solo porque sí en McAllen</a></li>
+  <li><a href="/flower-delivery/edinburg/just-because">Flores solo porque sí en Edinburg</a></li>
+  <li><a href="/flower-delivery/mission/just-because">Flores solo porque sí en Mission</a></li>
+  <li><a href="/flower-delivery/pharr/just-because">Flores solo porque sí en Pharr</a></li>
+</ul>
+<p>Llegamos a todas las ciudades del Valle — desde Weslaco hasta Harlingen y Brownsville. Para los pueblos más alejados, la entrega al día siguiente mantiene viva la sorpresa.</p>
+
+<h2>Haz la Sorpresa Aún Mejor</h2>
+<ul>
+  <li><strong>Envíalas de forma anónima</strong> — deja la tarjeta en blanco o fírmala como "un admirador secreto" para un toque extra de misterio.</li>
+  <li><strong>Prográmalas para la mañana</strong> — flores esperando al llegar del trabajo, o que llegan a media mañana, marcan el tono de todo el día.</li>
+  <li><strong>Agrega una nota corta y sincera</strong> — "pensando en ti" vale más que un discurso largo. La escribimos a mano por ti.</li>
+  <li><strong>Elige un arreglo en florero</strong> — llega listo para exhibir, sin buscar un recipiente a las prisas.</li>
+</ul>
+<p>Nunca hay un día equivocado para enviar flores solo porque sí. Llama al <strong>(956) 313-1847</strong> o pide antes de las 3 PM para entrega sorpresa el mismo día en cualquier lugar del Valle del Río Grande.</p>`,
+    faqs: [
+      {
+        q: '¿Qué significan las flores "solo porque sí"?',
+        a: 'Las flores "solo porque sí" son un ramo sorpresa enviado sin una ocasión especial — sin cumpleaños, día festivo ni aniversario. Simplemente dicen "estaba pensando en ti", y por eso son tan memorables.',
+      },
+      {
+        q: "¿Puedo pedir flores solo porque sí con entrega el mismo día en el Valle?",
+        a: "Sí. Entregamos flores sorpresa el mismo día en McAllen, Edinburg, Mission, Pharr y todas las ciudades del Valle cuando pides antes de las 3 PM. Llama al (956) 313-1847.",
+      },
+      {
+        q: "¿Cuáles son las mejores flores para enviar sin razón?",
+        a: "Los girasoles, un ramo silvestre mixto, las rosas en tonos suaves y las margaritas alegres son favoritos para regalos solo porque sí. Cuéntanos sobre la persona y combinamos un arreglo con su personalidad.",
+      },
+      {
+        q: "¿Puedo enviar flores solo porque sí de forma anónima?",
+        a: "Por supuesto. Solo avísanos y dejamos la tarjeta en blanco o la firmamos como prefieras — perfecto para una sorpresa de admirador secreto.",
+      },
+      {
+        q: "¿Cuánto cuestan las flores solo porque sí?",
+        a: "Los ramos sorpresa comienzan alrededor de $45 y suben según el tamaño y las flores. Llama al (956) 313-1847 y encontramos algo hermoso dentro de tu presupuesto.",
+      },
+      {
+        q: "¿Es raro enviarme flores a mí misma solo porque sí?",
+        a: "Para nada — regalarte flores es una de las formas más sencillas de alegrar tu propia semana. Muchos de nuestros clientes del Valle se consienten con un ramo fresco para la mesa de la cocina.",
+      },
+    ],
+    tags: [
+      "flores solo porque sí Valle",
+      "flores sorpresa McAllen",
+      "entrega de flores el mismo día",
+      "florista Valle de Texas",
     ],
   },
 ];

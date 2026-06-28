@@ -17,6 +17,9 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: Claude-User
+Allow: /
+
 User-agent: anthropic-ai
 Allow: /
 
@@ -50,5 +53,15 @@ Allow: /
 User-agent: Meta-ExternalAgent
 Allow: /
 
+User-agent: YouBot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: Timpibot
+Allow: /
+
 # Page directory for LLMs: https://www.forgetmenotrgv.com/llms.txt
+# Full content corpus for LLMs: https://www.forgetmenotrgv.com/llms-full.txt
 Sitemap: https://www.forgetmenotrgv.com/sitemap.xml

@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { PRODUCTS } from "@/data/products";
 import { Link } from "@tanstack/react-router";
+import { Reveal } from "@/components/site/Reveal";
 
 // Hand-picked, visually varied selection
 const FEATURED_SLUGS = [
@@ -22,7 +23,10 @@ export function Featured() {
   return (
     <section id="featured" className="relative py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+        <Reveal
+          as="div"
+          className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end"
+        >
           <div className="max-w-xl">
             <p className="mb-4 text-xs uppercase tracking-[0.3em] text-primary">
               Featured Arrangements
@@ -38,12 +42,14 @@ export function Featured() {
             Browse the full shop
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </Link>
-        </div>
+        </Reveal>
 
         <div className="mt-12 grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-4">
-          {items.map((p) => (
-            <a
+          {items.map((p, i) => (
+            <Reveal
               key={p.slug}
+              as="a"
+              delay={(i % 4) * 90}
               href={p.url}
               target="_blank"
               rel="noopener noreferrer"
@@ -71,7 +77,7 @@ export function Featured() {
                   {p.price}
                 </span>
               </div>
-            </a>
+            </Reveal>
           ))}
         </div>
       </div>

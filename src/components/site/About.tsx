@@ -1,10 +1,11 @@
+import { Reveal } from "@/components/site/Reveal";
 import about from "@/assets/about.jpg";
 
 export function About() {
   return (
     <section id="about" className="relative py-24 sm:py-32">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 px-6 lg:grid-cols-12 lg:gap-20">
-        <div className="relative lg:col-span-5">
+        <Reveal as="div" y={20} className="relative lg:col-span-5">
           <div className="aspect-[4/5] overflow-hidden rounded-[2rem] shadow-[var(--shadow-soft)]">
             <img
               src={about}
@@ -16,9 +17,9 @@ export function About() {
             />
           </div>
           <div className="absolute -right-4 -top-4 -z-10 h-full w-full rounded-[2rem] border border-primary/20" />
-        </div>
+        </Reveal>
 
-        <div className="lg:col-span-7">
+        <Reveal as="div" delay={120} y={16} className="lg:col-span-7">
           <p className="mb-5 text-xs uppercase tracking-[0.3em] text-primary">Our Story</p>
           <h2 className="font-serif text-4xl leading-tight text-foreground sm:text-5xl">
             Meet Mariela &mdash; the hands behind every bloom.
@@ -53,7 +54,7 @@ export function About() {
               </div>
             ))}
           </dl>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

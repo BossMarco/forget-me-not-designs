@@ -1,5 +1,6 @@
 import { Phone, ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Reveal } from "@/components/site/Reveal";
 import hero from "@/assets/hero.jpg";
 
 export function Hero() {
@@ -41,14 +42,14 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative lg:col-span-6">
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-xl overflow-hidden rounded-[2rem] shadow-[var(--shadow-soft)]">
+        <Reveal as="div" delay={140} y={20} className="relative lg:col-span-6">
+          <div className="group relative mx-auto aspect-[4/5] w-full max-w-xl overflow-hidden rounded-[2rem] shadow-[var(--shadow-soft)]">
             <img
               src={hero}
               alt="Lavender and white floral bouquet by Forget Me Not Flowers & Gifts"
               width={1600}
               height={1200}
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]"
             />
           </div>
           <div className="absolute -bottom-6 -left-6 hidden rounded-2xl bg-card px-6 py-4 shadow-[var(--shadow-soft)] sm:block">
@@ -60,7 +61,7 @@ export function Hero() {
           <div className="absolute -right-4 top-10 hidden rotate-3 rounded-full border border-primary/20 bg-background/80 px-5 py-2 text-xs uppercase tracking-[0.25em] text-primary backdrop-blur md:block">
             Same-Day Delivery
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

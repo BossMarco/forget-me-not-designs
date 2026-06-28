@@ -6,7 +6,7 @@ const COUNTY_ORDER: County[] = ["Hidalgo", "Cameron", "Starr", "Willacy"];
 
 function CityLink({ city, occasionSlug }: { city: City; occasionSlug?: string }) {
   const className =
-    "inline-flex items-center justify-between gap-2 rounded-xl border border-border bg-card px-4 py-2.5 text-sm text-foreground/85 transition-colors hover:border-primary/40 hover:text-primary";
+    "group inline-flex items-center justify-between gap-2 rounded-xl border border-border bg-card px-4 py-2.5 text-sm text-foreground/85 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:text-primary hover:shadow-[var(--shadow-soft)]";
   return occasionSlug ? (
     <Link
       to="/flower-delivery/$city/$occasion"
@@ -14,12 +14,12 @@ function CityLink({ city, occasionSlug }: { city: City; occasionSlug?: string })
       className={className}
     >
       {city.name}
-      <ArrowUpRight className="h-3.5 w-3.5 text-primary" />
+      <ArrowUpRight className="h-3.5 w-3.5 text-primary transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
     </Link>
   ) : (
     <Link to="/flower-delivery/$city" params={{ city: city.slug }} className={className}>
       {city.name}
-      <ArrowUpRight className="h-3.5 w-3.5 text-primary" />
+      <ArrowUpRight className="h-3.5 w-3.5 text-primary transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
     </Link>
   );
 }

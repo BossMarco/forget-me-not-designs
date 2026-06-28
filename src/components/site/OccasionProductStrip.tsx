@@ -25,8 +25,14 @@ export function OccasionProductStrip({
     <section className="mx-auto max-w-7xl px-6 py-12">
       <div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-end">
         <h2 className="font-serif text-3xl text-foreground sm:text-4xl">{title}</h2>
-        <a href="#inquire" className="text-sm text-primary hover:underline">
-          Don't see it? Ask for a custom design →
+        <a
+          href="#inquire"
+          className="group text-sm text-primary transition-colors hover:text-primary/80"
+        >
+          Don't see it? Ask for a custom design{" "}
+          <span className="inline-block transition-transform duration-300 group-hover:translate-x-0.5">
+            →
+          </span>
         </a>
       </div>
 
