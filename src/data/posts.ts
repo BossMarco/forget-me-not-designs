@@ -10,6 +10,8 @@ import { batch05 } from "./posts-batches/batch-05";
 import { batch06 } from "./posts-batches/batch-06";
 import { batch07 } from "./posts-batches/batch-07";
 import { batch10 } from "./posts-batches/batch-10";
+import { batch11 } from "./posts-batches/batch-11";
+import { batch12 } from "./posts-batches/batch-12";
 
 export interface PostFaq {
   q: string;
@@ -1386,6 +1388,8 @@ export const POSTS: BlogPost[] = [
   ...batch06,
   ...batch07,
   ...batch10,
+  ...batch11,
+  ...batch12,
 ];
 
 export function getPost(slug: string): BlogPost | undefined {
