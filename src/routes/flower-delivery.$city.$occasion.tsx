@@ -188,6 +188,33 @@ function CityOccasionPage() {
         </div>
       </section>
 
+      {occasion.gallery && (
+        <section className="mx-auto max-w-7xl px-6 py-12">
+          <h2 className="font-serif text-3xl text-foreground sm:text-4xl">
+            Our recent {occasion.label.toLowerCase()} work
+          </h2>
+          <p className="mt-3 max-w-2xl text-muted-foreground">
+            Hand-made in our studio and delivered to families across {city.name} and the Rio
+            Grande Valley — real arrangements, not stock photos.
+          </p>
+          <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+            {occasion.gallery.map((g) => (
+              <figure key={g.src} className="overflow-hidden rounded-xl border border-border bg-card">
+                <img
+                  src={g.src}
+                  alt={g.alt}
+                  loading="lazy"
+                  className="aspect-[3/4] w-full object-cover"
+                />
+                <figcaption className="px-3 py-2 text-xs text-muted-foreground">
+                  {g.caption}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+      )}
+
       <OccasionProductStrip
         categories={occasion.productCategories}
         seed={seed}

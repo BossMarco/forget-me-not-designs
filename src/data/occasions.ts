@@ -35,6 +35,8 @@ export interface Occasion {
   /** sitemap priority weight + index tiering */
   tier: 1 | 2;
   seasonalMonth?: number; // 1-12, bumps changefreq near the season
+  /** real-work photo gallery, rendered on the hub and every city page for this occasion */
+  gallery?: { src: string; alt: string; caption: string }[];
 }
 
 export const OCCASIONS: Occasion[] = [
@@ -545,6 +547,43 @@ export const OCCASIONS: Occasion[] = [
     ],
     schemaType: "Service",
     tier: 1,
+    gallery: [
+      {
+        src: "/images/sympathy/standing-heart-wreath-pink-white.jpg",
+        alt: "Heart-shaped standing sympathy wreath with pink roses, carnations and white mums, hand-made in our RGV studio",
+        caption: "Open-heart standing wreath — pink roses & white mums",
+      },
+      {
+        src: "/images/sympathy/standing-spray-all-white.jpg",
+        alt: "All-white funeral standing spray with mums, daisies and gladiolus for an RGV funeral service",
+        caption: "Classic all-white standing spray",
+      },
+      {
+        src: "/images/sympathy/standing-spray-red-roses-white.jpg",
+        alt: "Standing funeral spray with red roses, white hydrangea and lilies delivered to a Rio Grande Valley funeral home",
+        caption: "Red rose & white hydrangea standing spray",
+      },
+      {
+        src: "/images/sympathy/standing-spray-yellow-white.jpg",
+        alt: "Yellow rose and white chrysanthemum funeral standing spray with personalized ribbon",
+        caption: "Yellow & white spray with personalized ribbon",
+      },
+      {
+        src: "/images/sympathy/standing-spray-blue-white-hydrangea.jpg",
+        alt: "Blue and white sympathy standing spray with hydrangea, mums and gladiolus and a personalized memorial ribbon",
+        caption: "Blue & white hydrangea tribute",
+      },
+      {
+        src: "/images/sympathy/standing-spray-lavender-purple.jpg",
+        alt: "Lavender and purple standing sympathy spray with roses, hydrangea and stock, made for an RGV family",
+        caption: "Lavender & purple standing spray",
+      },
+      {
+        src: "/images/sympathy/standing-spray-white-blue-ribbon.jpg",
+        alt: "White funeral standing spray with roses and mums displayed at a Rio Grande Valley funeral home service",
+        caption: "White standing spray, delivered to the service",
+      },
+    ],
   },
   {
     slug: "get-well",
